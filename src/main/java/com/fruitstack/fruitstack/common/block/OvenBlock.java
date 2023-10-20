@@ -6,6 +6,7 @@ import com.fruitstack.fruitstack.common.registry.ModSounds;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -139,7 +140,8 @@ public class OvenBlock extends Block {
 
 		return InteractionResult.PASS;
 	}
-	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+	@Override
+	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
 		if (!worldIn.isClientSide) {
 			boolean isHeated = isHeated(worldIn, pos);
 			if (random.nextFloat() <= 0.1F && isHeated) {
@@ -159,7 +161,7 @@ public class OvenBlock extends Block {
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rand) {
 		boolean isHeated = isHeated(level, pos);
 		if (isHeated) {
 			double x = (double) pos.getX() + 0.5D;

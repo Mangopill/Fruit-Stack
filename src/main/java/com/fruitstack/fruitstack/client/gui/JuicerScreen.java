@@ -6,6 +6,7 @@ import com.fruitstack.fruitstack.fruitstack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.recipebook.RecipeBookComponent;
 import net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener;
@@ -53,33 +54,31 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerBlockMenu> imple
 	}
 
 	@Override
-	public void render(PoseStack ms, final int mouseX, final int mouseY, float partialTicks) {
-		this.renderBackground(ms);
+	public void render(GuiGraphics gui, final int mouseX, final int mouseY, float partialTicks) {
+		this.renderBackground(gui);
 
 		if (this.recipeBookComponent.isVisible() && this.widthTooNarrow) {
-			this.renderBg(ms, partialTicks, mouseX, mouseY);
-			this.recipeBookComponent.render(ms, mouseX, mouseY, partialTicks);
+			this.renderBg(gui, partialTicks, mouseX, mouseY);
+			this.recipeBookComponent.render(gui, mouseX, mouseY, partialTicks);
 		} else {
-			this.recipeBookComponent.render(ms, mouseX, mouseY, partialTicks);
-			super.render(ms, mouseX, mouseY, partialTicks);
-			this.recipeBookComponent.renderGhostRecipe(ms, this.leftPos, this.topPos, false, partialTicks);
+			this.recipeBookComponent.render(gui, mouseX, mouseY, partialTicks);
+			super.render(gui, mouseX, mouseY, partialTicks);
+			this.recipeBookComponent.renderGhostRecipe(gui, this.leftPos, this.topPos, false, partialTicks);
 		}
 
-		this.renderMealDisplayTooltip(ms, mouseX, mouseY);
-		this.renderHeatIndicatorTooltip(ms, mouseX, mouseY);
-		this.recipeBookComponent.renderTooltip(ms, this.leftPos, this.topPos, mouseX, mouseY);
+		this.renderMealDisplayTooltip(gui, mouseX, mouseY);
+		this.renderHeatIndicatorTooltip(gui, mouseX, mouseY);
+		this.recipeBookComponent.renderTooltip(gui, this.leftPos, this.topPos, mouseX, mouseY);
 	}
 
-	private void renderHeatIndicatorTooltip(PoseStack ms, int mouseX, int mouseY) {
+	private void renderHeatIndicatorTooltip(GuiGraphics gui, int mouseX, int mouseY) {
 		if (this.isHovering(HEAT_ICON.x, HEAT_ICON.y, HEAT_ICON.width, HEAT_ICON.height, mouseX, mouseY)) {
-			List<Component> tooltip = new ArrayList<>();
 			String key = "container.juicer." + (this.menu.isHeated() ? "heated" : "not_heated");
-			tooltip.add(TextUtils.getTranslation(key, menu));
-			this.renderComponentTooltip(ms, tooltip, mouseX, mouseY);
+			gui.renderTooltip(this.font, TextUtils.getTranslation(key, menu), mouseX, mouseY);
 		}
 	}
 
-	protected void renderMealDisplayTooltip(PoseStack ms, int mouseX, int mouseY) {
+	protected void renderMealDisplayTooltip(GuiGraphics gui, int mouseX, int mouseY) {
 		if (this.minecraft != null && this.minecraft.player != null && this.menu.getCarried().isEmpty() && this.hoveredSlot != null && this.hoveredSlot.hasItem()) {
 			if (this.hoveredSlot.index == 3) {
 				List<Component> tooltip = new ArrayList<>();
@@ -92,37 +91,37 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerBlockMenu> imple
 
 				tooltip.add(TextUtils.getTranslation("container.tripod_vessel_for_making_pills_of_immortality.served_on", container).withStyle(ChatFormatting.GRAY));
 
-				this.renderComponentTooltip(ms, tooltip, mouseX, mouseY);
+				gui.renderComponentTooltip(font, tooltip, mouseX, mouseY);
 			} else {
-				this.renderTooltip(ms, this.hoveredSlot.getItem(), mouseX, mouseY);
+				gui.renderTooltip(font, this.hoveredSlot.getItem(), mouseX, mouseY);
 			}
 		}
 	}
 
 	@Override
-	protected void renderLabels(PoseStack ms, int mouseX, int mouseY) {
-		super.renderLabels(ms, mouseX, mouseY);
-		this.font.draw(ms, this.playerInventoryTitle, 8.0f, (float) (this.imageHeight - 96 + 2), 4210752);
+	protected void renderLabels(GuiGraphics gui, int mouseX, int mouseY) {
+		super.renderLabels(gui, mouseX, mouseY);
+		gui.drawString(this.font, this.playerInventoryTitle, 8, (this.imageHeight - 96 + 2), 4210752, false);
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int mouseX, int mouseY) {
+	protected void renderBg(GuiGraphics gui, float partialTicks, int mouseX, int mouseY) {
 		// Render UI background
 		RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
 		if (this.minecraft == null)
 			return;
 
 		RenderSystem.setShaderTexture(0, BACKGROUND_TEXTURE);
-		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+		gui.blit(BACKGROUND_TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
 
 		// Render heat icon
 		if (this.menu.isHeated()) {
-			this.blit(ms, this.leftPos + HEAT_ICON.x, this.topPos + HEAT_ICON.y, 176, 0, HEAT_ICON.width, HEAT_ICON.height);
+			gui.blit(BACKGROUND_TEXTURE, this.leftPos + HEAT_ICON.x, this.topPos + HEAT_ICON.y, 176, 0, HEAT_ICON.width, HEAT_ICON.height);
 		}
 
 		// Render progress arrow
 		int l = this.menu.getCookProgressionScaled();
-		this.blit(ms, this.leftPos + PROGRESS_ARROW.x, this.topPos + PROGRESS_ARROW.y, 176, 15, l + 1, PROGRESS_ARROW.height);
+		gui.blit(BACKGROUND_TEXTURE, this.leftPos + PROGRESS_ARROW.x, this.topPos + PROGRESS_ARROW.y, 176, 15, l + 1, PROGRESS_ARROW.height);
 	}
 
 	@Override
@@ -156,11 +155,11 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerBlockMenu> imple
 		this.recipeBookComponent.recipesUpdated();
 	}
 
-	@Override
-	public void removed() {
-		this.recipeBookComponent.removed();
-		super.removed();
-	}
+//	@Override
+//	public void removed() {
+//		this.recipeBookComponent.removed();
+//		super.removed();
+//	}
 
 	@Override
 	@Nonnull

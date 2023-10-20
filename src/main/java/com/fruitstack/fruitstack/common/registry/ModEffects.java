@@ -1,6 +1,5 @@
 package com.fruitstack.fruitstack.common.registry;
 
-import com.fruitstack.fruitstack.common.effect.WarmStomachEffect;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,6 +8,7 @@ import com.fruitstack.fruitstack.fruitstack;
 import com.fruitstack.fruitstack.common.effect.CrispEffect;
 import com.fruitstack.fruitstack.common.effect.SweetEffect;
 import com.fruitstack.fruitstack.common.effect.TipsyEffect;
+import com.fruitstack.fruitstack.common.effect.WarmStomachEffect;
 
 public class ModEffects
 {

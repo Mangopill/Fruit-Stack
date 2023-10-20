@@ -3,7 +3,7 @@ package com.fruitstack.fruitstack.client.renderer;
 import com.fruitstack.fruitstack.common.block.JuicerBlock;
 import com.fruitstack.fruitstack.common.block.entity.JuicerBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
@@ -29,8 +30,8 @@ public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 		int posLong = (int) JuicerBlockEntity.getBlockPos().asLong();
 
 		for (int i = 0; i < inventory.getSlots(); ++i) {
-			ItemStack ClayOvenStack = inventory.getStackInSlot(i);
-			if (!ClayOvenStack.isEmpty()) {
+			ItemStack JuicerStack = inventory.getStackInSlot(i);
+			if (!JuicerStack.isEmpty()) {
 				poseStack.pushPose();
 
 				// Center item above the Juicer
@@ -38,10 +39,10 @@ public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 
 				// Rotate item to face the Juicer's front side
 				float f = -direction.toYRot();
-				poseStack.mulPose(Vector3f.YP.rotationDegrees(f));
+				poseStack.mulPose(Axis.YP.rotationDegrees(f));
 
 				// Rotate item flat on the Juicer. Use X and Y from now on
-				poseStack.mulPose(Vector3f.XP.rotationDegrees(90.0F));
+				poseStack.mulPose(Axis.XP.rotationDegrees(90.0F));
 
 				// Neatly align items according to their index
 				Vec3 itemOffset = JuicerBlockEntity.getJuicerItemOffset(i);
@@ -51,10 +52,7 @@ public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 				poseStack.scale(0.375F, 0.375F, 0.375F);
 
 				if (JuicerBlockEntity.getLevel() != null)
-					Minecraft.getInstance().getItemRenderer().renderStatic(ClayOvenStack,
-							ItemTransforms.TransformType.FIXED,
-							LevelRenderer.getLightColor(JuicerBlockEntity.getLevel(), JuicerBlockEntity.getBlockPos().above()),
-							combinedOverlayIn, poseStack, buffer, posLong + i);
+					Minecraft.getInstance().getItemRenderer().renderStatic(JuicerStack, ItemDisplayContext.FIXED, LevelRenderer.getLightColor(JuicerBlockEntity.getLevel(), JuicerBlockEntity.getBlockPos().above()), combinedOverlayIn, poseStack, buffer, JuicerBlockEntity.getLevel(), posLong + i);
 				poseStack.popPose();
 			}
 		}

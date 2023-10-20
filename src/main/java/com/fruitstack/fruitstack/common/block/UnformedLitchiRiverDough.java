@@ -1,5 +1,6 @@
 package com.fruitstack.fruitstack.common.block;
 
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -61,9 +62,10 @@ public class UnformedLitchiRiverDough extends Block {
         super.createBlockStateDefinition(builder);
     }
 
-    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
         if (!worldIn.isClientSide) {
-            if (random.nextFloat() <= 0.1F) {
+            if (rand.nextFloat() <= 0.1F) {
                 int age = state.getValue(AGE);
                 if (age == 0) {
                     worldIn.setBlock(pos, state.setValue(AGE, 1), 3);

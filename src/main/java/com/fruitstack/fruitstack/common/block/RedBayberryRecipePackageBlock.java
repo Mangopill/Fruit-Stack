@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -26,7 +26,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Properties;
 import java.util.stream.Collectors;
 
 public class RedBayberryRecipePackageBlock extends Block {
@@ -36,7 +35,7 @@ public class RedBayberryRecipePackageBlock extends Block {
     public final static VoxelShape E_W_SHAPE = Block.box(5, 1, 5, 11, 6, 11);
 
     public RedBayberryRecipePackageBlock() {
-        super(Properties.of(Material.METAL).strength(1.0f).noOcclusion());
+        super(Properties.of().mapColor(MapColor.METAL).strength(1.0f).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 

@@ -1,8 +1,8 @@
 {
   "parent": "fruitstack:custom/recipe",
   "textures": {
-    "0": "fruitstack:recipe/peach_pie_recipe",
-    "1": "fruitstack:recipe/recipe_back",
-    "particle": "fruitstack:recipe/peach_pie_recipe"
+    "0": "fruitstack:block/peach_pie_recipe",
+    "1": "fruitstack:block/recipe_back",
+    "particle": "fruitstack:block/peach_pie_recipe"
   }
 }

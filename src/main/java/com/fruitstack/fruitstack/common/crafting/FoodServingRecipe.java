@@ -4,9 +4,11 @@ import com.fruitstack.fruitstack.common.block.entity.TvfmpoitBlockEntity;
 import com.fruitstack.fruitstack.common.registry.ModItems;
 import com.fruitstack.fruitstack.common.registry.ModRecipeSerializers;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CustomRecipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
@@ -14,8 +16,8 @@ import net.minecraft.world.level.Level;
 
 public class FoodServingRecipe extends CustomRecipe
 {
-	public FoodServingRecipe(ResourceLocation id) {
-		super(id);
+	public FoodServingRecipe(ResourceLocation id, CraftingBookCategory category) {
+		super(id, category);
 	}
 
 	@Override
@@ -47,7 +49,7 @@ public class FoodServingRecipe extends CustomRecipe
 	}
 
 	@Override
-	public ItemStack assemble(CraftingContainer container) {
+	public ItemStack assemble(CraftingContainer container, RegistryAccess access) {
 		for (int i = 0; i < container.getContainerSize(); ++i) {
 			ItemStack selectedStack = container.getItem(i);
 			if (!selectedStack.isEmpty() && selectedStack.is(ModItems.TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY.get())) {
@@ -66,8 +68,8 @@ public class FoodServingRecipe extends CustomRecipe
 
 		for (int i = 0; i < remainders.size(); ++i) {
 			ItemStack selectedStack = container.getItem(i);
-			if (selectedStack.hasContainerItem()) {
-				remainders.set(i, selectedStack.getContainerItem());
+			if (selectedStack.hasCraftingRemainingItem()) {
+				remainders.set(i, selectedStack.getCraftingRemainingItem());
 			} else if (selectedStack.is(ModItems.TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY.get())) {
 				TvfmpoitBlockEntity.takeServingFromItem(selectedStack);
 				ItemStack newTripodVesselForMakingPillsOfImmortalityStack = selectedStack.copy();

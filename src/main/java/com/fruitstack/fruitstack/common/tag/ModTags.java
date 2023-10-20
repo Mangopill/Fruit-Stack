@@ -2,7 +2,10 @@ package com.fruitstack.fruitstack.common.tag;
 
 import com.fruitstack.fruitstack.fruitstack;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
@@ -23,14 +26,14 @@ public class ModTags
 	public static final TagKey<Block> HEAT_SOURCES = modBlockTag("heat_sources");
 	public static final TagKey<Block> HEAT_CONDUCTORS = modBlockTag("heat_conductors");
 	private static TagKey<Item> modItemTag(String path) {
-		return TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation(fruitstack.MODID + ":" + path));
+		return ItemTags.create(new ResourceLocation(fruitstack.MODID, path));
 	}
 
 	private static TagKey<Block> modBlockTag(String path) {
-		return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(fruitstack.MODID + ":" + path));
+		return BlockTags.create(new ResourceLocation(fruitstack.MODID, path));
 	}
 
 	private static TagKey<EntityType<?>> modEntityTag(String path) {
-		return TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation(fruitstack.MODID + ":" + path));
+		return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(fruitstack.MODID, path));
 	}
 }

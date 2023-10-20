@@ -3,6 +3,7 @@ package com.fruitstack.fruitstack.common.block;
 import com.fruitstack.fruitstack.common.utility.TextUtils;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -69,7 +70,7 @@ public class DriedFruit extends Block {
                 level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
                 return InteractionResult.SUCCESS;
             } else {
-                player.displayClientMessage(TextUtils.getTranslation("block.dried.get", dried.getContainerItem().getHoverName()), true);
+                player.displayClientMessage(TextUtils.getTranslation("block.dried.get", dried.getCraftingRemainingItem().getHoverName()), true);
             }
         return InteractionResult.PASS;
     }
@@ -95,10 +96,10 @@ public class DriedFruit extends Block {
         builder.add(AGE);
         super.createBlockStateDefinition(builder);
     }
-
-    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
         if (!worldIn.isClientSide && isDaytime(worldIn) && !worldIn.isRaining()) {
-            if (random.nextFloat() <= 0.1F) {
+            if (rand.nextFloat() <= 0.1F) {
                 int age = state.getValue(AGE);
                 if (age == 0) {
                     if (worldIn.canSeeSky(pos)) {

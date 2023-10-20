@@ -9,11 +9,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import java.util.Properties;
 
 import javax.annotation.Nullable;
 
@@ -28,7 +26,7 @@ public class ApricotRecipeBlock extends Block {
     public final static VoxelShape WEST_SHAPE = Block.box(0, 0, 1, 1.5, 16, 15);
 
     public ApricotRecipeBlock(boolean acquirableViaPackage) {
-        super(Properties.of(Material.WOOD).strength(1.0f).noOcclusion());
+        super(Properties.of().ignitedByLava().mapColor(MapColor.WOOD).strength(1.0f).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
         this.acquirableViaPackage = acquirableViaPackage;
     }

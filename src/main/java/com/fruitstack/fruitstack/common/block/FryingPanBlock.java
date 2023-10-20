@@ -3,10 +3,7 @@ package com.fruitstack.fruitstack.common.block;
 import com.fruitstack.fruitstack.common.block.entity.JuicerBlockEntity;
 import com.fruitstack.fruitstack.common.block.state.FryingPanStage;
 import com.fruitstack.fruitstack.common.block.state.JuicerStage;
-import com.fruitstack.fruitstack.common.registry.ModBlocks;
-import com.fruitstack.fruitstack.common.registry.ModItems;
-import com.fruitstack.fruitstack.common.registry.ModParticleTypes;
-import com.fruitstack.fruitstack.common.registry.ModSounds;
+import com.fruitstack.fruitstack.common.registry.*;
 import com.fruitstack.fruitstack.common.tag.ModTags;
 import com.fruitstack.fruitstack.common.utility.TextUtils;
 import com.fruitstack.fruitstack.fruitstack;
@@ -14,6 +11,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -55,8 +53,9 @@ import net.minecraftforge.network.NetworkHooks;
 import java.util.*;
 import java.util.function.Supplier;
 
+import static com.fruitstack.fruitstack.common.registry.ModDamageTypes.FRYING_PAN_BURN;
+
 public class FryingPanBlock extends Block {
-	public static final DamageSource FRYING_PAN_DAMAGE = (new DamageSource(fruitstack.MODID + ".frying_pan")).setIsFire();
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	public static final EnumProperty<FryingPanStage> STAGE = EnumProperty.create("stage", FryingPanStage.class);
 	protected static final VoxelShape SHAPE = Block.box(2.0, 1.0, 2.0, 14.0, 2.0, 14.0);
@@ -112,13 +111,13 @@ public class FryingPanBlock extends Block {
 					level.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F,
 							ModSounds.BLOCK_FRYING_PAN_OIL_SIZZLE.get(), SoundSource.BLOCKS, 0.8F, 1.0F);
 				}else if (heldStack.getItem() == Items.SUGAR) {//add food(milk tea)
-						level.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F,
-								ModSounds.BLOCK_FRYING_PAN_ADD_FOOD.get(), SoundSource.BLOCKS, 0.8F, 1.0F);
-						heldStack.shrink(1);
-						level.setBlock(pos, state.setValue(STAGE, FryingPanStage.FRYING_PAN_MILKY_TEA_SUGAR_AGE0), 3);
+					level.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F,
+							ModSounds.BLOCK_FRYING_PAN_ADD_FOOD.get(), SoundSource.BLOCKS, 0.8F, 1.0F);
+					heldStack.shrink(1);
+					level.setBlock(pos, state.setValue(STAGE, FryingPanStage.FRYING_PAN_MILKY_TEA_SUGAR_AGE0), 3);
 					return InteractionResult.SUCCESS;
 				} else {
-					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.sunflower_oil", sunflower_oil.getContainerItem().getHoverName()), true);
+					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.sunflower_oil", sunflower_oil.getCraftingRemainingItem().getHoverName()), true);
 				}
 				return InteractionResult.SUCCESS;
 			} else if (state.getValue(STAGE).equals(FryingPanStage.FIRE)) {
@@ -127,7 +126,7 @@ public class FryingPanBlock extends Block {
 					level.playSound(null, pos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 1.0F, 1.0F);
 					level.setBlock(pos, state.setValue(STAGE, FryingPanStage.POT_COVER), 3);
 				} else {
-					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.pot_cover", pot_cover.getContainerItem().getHoverName()), true);
+					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.pot_cover", pot_cover.getCraftingRemainingItem().getHoverName()), true);
 				}
 				return InteractionResult.SUCCESS;
 			}else if (state.getValue(STAGE).equals(FryingPanStage.POT_COVER)) {
@@ -142,7 +141,7 @@ public class FryingPanBlock extends Block {
 					level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
 					level.setBlock(pos, state.setValue(STAGE, FryingPanStage.NONE), 3);
 				} else {
-					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.bowl", bowl.getContainerItem().getHoverName()), true);
+					player.displayClientMessage(TextUtils.getTranslation("block.frying_pan.bowl", bowl.getCraftingRemainingItem().getHoverName()), true);
 				}
 				return InteractionResult.SUCCESS;
 			}else if (state.getValue(STAGE).equals(FryingPanStage.SUNFLOWER_OIL)) {//add food
@@ -185,7 +184,7 @@ public class FryingPanBlock extends Block {
 				}
 				return InteractionResult.SUCCESS;
 			}else if(heldStack.getItem() == ModItems.SPATULA.get()) {//spatula
-				Random random = level.random;
+				RandomSource random = level.random;
 				if (random.nextFloat() < 0.1f) {
 					if (state.getValue(STAGE).equals(FryingPanStage.FRYING_PAN_STIR_FRIED_BEATING_MELONS_SEEDS_AGE0)) {
 						level.setBlock(pos, state.setValue(STAGE, FryingPanStage.FRYING_PAN_STIR_FRIED_BEATING_MELONS_SEEDS_AGE1), 3);
@@ -272,7 +271,7 @@ public class FryingPanBlock extends Block {
 				}
 				return InteractionResult.SUCCESS;
 			}else if(heldStack.getItem() == ModItems.SPATULA.get()) {//spatula
-				Random random = level.random;
+				RandomSource random = level.random;
 				if (random.nextFloat() < 0.1f) {
 					if (state.getValue(STAGE).equals(FryingPanStage.FRYING_PAN_STIR_FRIED_YOGURT_AGE0)) {
 						level.setBlock(pos, state.setValue(STAGE, FryingPanStage.FRYING_PAN_STIR_FRIED_YOGURT_AGE1), 3);
@@ -299,31 +298,27 @@ public class FryingPanBlock extends Block {
 		}
 		return InteractionResult.PASS;
 	}
-	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+	@Override
+	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
 		if (!worldIn.isClientSide) {
 			if (random.nextFloat() <= 0.5F && state.getValue(STAGE).equals(FryingPanStage.FIRE)) {
 				BlockPos blockPos;
 				// 在四个方向上生成火焰
 				blockPos = pos.north();
 				BlockState northBlockState = worldIn.getBlockState(blockPos);
-				if (northBlockState.getMaterial().isFlammable()) {
 				worldIn.setBlockAndUpdate(blockPos, Blocks.FIRE.defaultBlockState());
-				}
+
 				blockPos = pos.south();
 				BlockState southBlockState = worldIn.getBlockState(blockPos);
-				if (southBlockState.getMaterial().isFlammable()) {
 				worldIn.setBlockAndUpdate(blockPos, Blocks.FIRE.defaultBlockState());
-				}
+
 				blockPos = pos.east();
 				BlockState eastBlockState = worldIn.getBlockState(blockPos);
-				if (eastBlockState.getMaterial().isFlammable()) {
 				worldIn.setBlockAndUpdate(blockPos, Blocks.FIRE.defaultBlockState());
-			    }
+
 				blockPos = pos.west();
 				BlockState westBlockState = worldIn.getBlockState(blockPos);
-				if (westBlockState.getMaterial().isFlammable()) {
 				worldIn.setBlockAndUpdate(blockPos, Blocks.FIRE.defaultBlockState());
-		        }
 			}
 			if (!state.getValue(STAGE).equals(FryingPanStage.NONE) && !state.getValue(STAGE).equals(FryingPanStage.FIRE) && !state.getValue(STAGE).equals(FryingPanStage.POT_COVER) && !state.getValue(STAGE).equals(FryingPanStage.SUNFLOWER_OIL) && random.nextFloat() <= 0.1F) {
 				worldIn.setBlock(pos, state.setValue(STAGE, FryingPanStage.FIRE), 3);
@@ -331,7 +326,7 @@ public class FryingPanBlock extends Block {
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rand) {
 		boolean isHeated = isHeated(level, pos);
 		boolean isice = isice(level, pos);
 		if (isHeated) {
@@ -376,7 +371,7 @@ public class FryingPanBlock extends Block {
 	public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
 		boolean isHeated = isHeated(level, pos);
 		if (isHeated && !entity.fireImmune() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity) entity)) {
-			entity.hurt(FRYING_PAN_DAMAGE, 1.0F);
+			entity.hurt(ModDamageTypes.getSimpleDamageSource(level, ModDamageTypes.FRYING_PAN_BURN), 1.0F);
 		}
 
 		super.stepOn(level, pos, state, entity);

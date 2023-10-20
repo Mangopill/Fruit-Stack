@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockEntityTypes
 {
-	public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, fruitstack.MODID);
+	public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, fruitstack.MODID);
 
 	public static final RegistryObject<BlockEntityType<ClayOvenBlockEntity>> CLAY_OVEN = TILES.register("clay_oven",
 			() -> BlockEntityType.Builder.of(ClayOvenBlockEntity::new, ModBlocks.CLAY_OVEN.get()).build(null));

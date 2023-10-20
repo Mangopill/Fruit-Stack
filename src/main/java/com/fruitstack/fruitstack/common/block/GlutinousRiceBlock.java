@@ -6,6 +6,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -49,7 +50,7 @@ public class GlutinousRiceBlock extends BushBlock implements BonemealableBlock, 
 	}
 
 	@Override
-	public void tick(BlockState state, ServerLevel level, BlockPos pos, Random rand) {
+	public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource rand) {
 		super.tick(state, level, pos, rand);
 		if (!level.isAreaLoaded(pos, 1)) return;
 		if (level.getRawBrightness(pos.above(), 0) >= 6) {
@@ -143,7 +144,7 @@ public class GlutinousRiceBlock extends BushBlock implements BonemealableBlock, 
 	}
 
 	@Override
-	public boolean isValidBonemealTarget(BlockGetter level, BlockPos pos, BlockState state, boolean isClient) {
+	public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
 		BlockState upperState = level.getBlockState(pos.above());
 		if (upperState.getBlock() instanceof GlutinousRicePaniclesBlock) {
 			return !((GlutinousRicePaniclesBlock) upperState.getBlock()).isMaxAge(upperState);
@@ -152,7 +153,7 @@ public class GlutinousRiceBlock extends BushBlock implements BonemealableBlock, 
 	}
 
 	@Override
-	public boolean isBonemealSuccess(Level level, Random rand, BlockPos pos, BlockState state) {
+	public boolean isBonemealSuccess(Level level, RandomSource rand, BlockPos pos, BlockState state) {
 		return true;
 	}
 
@@ -161,7 +162,7 @@ public class GlutinousRiceBlock extends BushBlock implements BonemealableBlock, 
 	}
 
 	@Override
-	public void performBonemeal(ServerLevel level, Random rand, BlockPos pos, BlockState state) {
+	public void performBonemeal(ServerLevel level, RandomSource rand, BlockPos pos, BlockState state) {
 		int ageGrowth = Math.min(this.getAge(state) + this.getBonemealAgeIncrease(level), 7);
 		if (ageGrowth <= this.getMaxAge()) {
 			level.setBlockAndUpdate(pos, state.setValue(AGE, ageGrowth));

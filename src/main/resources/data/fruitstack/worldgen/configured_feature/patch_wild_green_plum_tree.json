@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": {
+          "type": "fruitstack:wild_green_plum_tree",
+          "config": {}
+        },
+        "placement": []
+      }
+    ]
+  }
+}

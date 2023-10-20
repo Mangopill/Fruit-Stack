@@ -105,7 +105,7 @@ public class CanMineFruitBlock extends Block
 			if (heldStack.is(ModTags.FRUIT_KNIVES)) {
 				heldStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
 				level.setBlock(pos, state.setValue(getServingsProperty(), servings - 1), 3);
-				if (!player.getAbilities().instabuild && serving.hasContainerItem()) {
+				if (!player.getAbilities().instabuild && serving.hasCraftingRemainingItem()) {
 					heldStack.shrink(1);
 				}
 				if (!player.getInventory().add(serving)) {
@@ -117,7 +117,7 @@ public class CanMineFruitBlock extends Block
 				level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
 				return InteractionResult.SUCCESS;
 			} else {
-				player.displayClientMessage(TextUtils.getTranslation("block.canminefruitblock.use_container", serving.getContainerItem().getHoverName()), true);
+				player.displayClientMessage(TextUtils.getTranslation("block.canminefruitblock.use_container", serving.getCraftingRemainingItem().getHoverName()), true);
 			}
 		}
 		return InteractionResult.PASS;
@@ -135,7 +135,7 @@ public class CanMineFruitBlock extends Block
 
 	@Override
 	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-		return level.getBlockState(pos.below()).getMaterial().isSolid();
+		return level.getBlockState(pos.below()).isSolid();
 	}
 
 	@Override

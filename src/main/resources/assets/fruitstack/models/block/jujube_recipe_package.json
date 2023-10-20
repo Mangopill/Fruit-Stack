@@ -1,8 +1,8 @@
 {
     "parent": "fruitstack:custom/recipe_package",
     "textures": {
-      "0": "fruitstack:recipe/jujube_recipe_package",
-      "particle": "fruitstack:recipe/jujube_recipe_package"
+      "0": "fruitstack:block/jujube_recipe_package",
+      "particle": "fruitstack:block/jujube_recipe_package"
     }
   }
   

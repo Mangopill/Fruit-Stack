@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:jungle",
+  "features": "fruitstack:patch_wild_hamimelon",
+  "step": "vegetal_decoration"
+}

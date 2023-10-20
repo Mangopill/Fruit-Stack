@@ -6,7 +6,7 @@ import com.fruitstack.fruitstack.common.block.entity.container.TvfmpoitBlockMenu
 import com.fruitstack.fruitstack.common.block.entity.inventory.TvfmpoittItemHandler;
 
 import com.fruitstack.fruitstack.common.crafting.TvfmpoitRecipe;
-import com.fruitstack.fruitstack.common.core.NewRecipeManager;
+import com.fruitstack.fruitstack.common.mixin.accessor.RecipeManagerAccessor;
 import com.fruitstack.fruitstack.common.registry.ModBlockEntityTypes;
 import com.fruitstack.fruitstack.common.registry.ModItems;
 import com.fruitstack.fruitstack.common.registry.ModParticleTypes;
@@ -25,6 +25,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Nameable;
 import net.minecraft.world.entity.ExperienceOrb;
@@ -33,14 +34,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.RecipeHolder;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.RecipeWrapper;
@@ -48,8 +51,11 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
+
+import static java.util.Map.entry;
 
 public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvider, HeatableBlockEntity, Nameable, RecipeHolder
 {
@@ -57,6 +63,22 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 	public static final int CONTAINER_SLOT = 9;
 	public static final int OUTPUT_SLOT = 10;
 	public static final int INVENTORY_SIZE = OUTPUT_SLOT + 1;
+	public static final Map<Item, Item> INGREDIENT_REMAINDER_OVERRIDES = Map.ofEntries(
+			entry(Items.POWDER_SNOW_BUCKET, Items.BUCKET),
+			entry(Items.AXOLOTL_BUCKET, Items.BUCKET),
+			entry(Items.COD_BUCKET, Items.BUCKET),
+			entry(Items.PUFFERFISH_BUCKET, Items.BUCKET),
+			entry(Items.SALMON_BUCKET, Items.BUCKET),
+			entry(Items.TROPICAL_FISH_BUCKET, Items.BUCKET),
+			entry(Items.SUSPICIOUS_STEW, Items.BOWL),
+			entry(Items.MUSHROOM_STEW, Items.BOWL),
+			entry(Items.RABBIT_STEW, Items.BOWL),
+			entry(Items.BEETROOT_SOUP, Items.BOWL),
+			entry(Items.POTION, Items.GLASS_BOTTLE),
+			entry(Items.SPLASH_POTION, Items.GLASS_BOTTLE),
+			entry(Items.LINGERING_POTION, Items.GLASS_BOTTLE),
+			entry(Items.EXPERIENCE_BOTTLE, Items.GLASS_BOTTLE)
+	);
 
 	private final ItemStackHandler inventory;
 	private final LazyOptional<IItemHandler> inputHandler;
@@ -221,7 +243,7 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 
 	public static void animationTick(Level level, BlockPos pos, BlockState state, TvfmpoitBlockEntity tripodVesselForMakingPillsOfImmortality) {
 		if (tripodVesselForMakingPillsOfImmortality.isHeated(level, pos)) {
-			Random random = level.random;
+			RandomSource random = level.random;
 			if (random.nextFloat() < 0.2F) {
 				double x = (double) pos.getX() + 0.5D + (random.nextDouble() * 0.6D - 0.3D);
 				double y = (double) pos.getY() + 0.7D;
@@ -243,14 +265,14 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 		if (level == null) return Optional.empty();
 
 		if (lastRecipeID != null) {
-			NewRecipeManager recipeManager = new NewRecipeManager();
-			Recipe<RecipeWrapper> recipe = recipeManager.fruitstack_invokeGetRecipeMap(ModRecipeTypes.COOKING.get())
+			Recipe<RecipeWrapper> recipe = ((RecipeManagerAccessor) level.getRecipeManager())
+					.getRecipeMap(ModRecipeTypes.COOKING.get())
 					.get(lastRecipeID);
 			if (recipe instanceof TvfmpoitRecipe) {
 				if (recipe.matches(inventoryWrapper, level)) {
 					return Optional.of((TvfmpoitRecipe) recipe);
 				}
-				if (recipe.getResultItem().sameItem(getMeal())) {
+				if (ItemStack.isSameItem(recipe.getResultItem(this.level.registryAccess()), getMeal())) {
 					return Optional.empty();
 				}
 			}
@@ -269,10 +291,11 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 	}
 
 	public ItemStack getContainer() {
-		if (!mealContainerStack.isEmpty()) {
+		ItemStack mealStack = getMeal();
+		if (!mealStack.isEmpty() && !mealContainerStack.isEmpty()) {
 			return mealContainerStack;
 		} else {
-			return getMeal().getContainerItem();
+			return mealStack.getCraftingRemainingItem();
 		}
 	}
 
@@ -285,14 +308,14 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 
 	protected boolean canCook(TvfmpoitRecipe recipe) {
 		if (hasInput()) {
-			ItemStack resultStack = recipe.getResultItem();
+			ItemStack resultStack = recipe.getResultItem(this.level.registryAccess());
 			if (resultStack.isEmpty()) {
 				return false;
 			} else {
 				ItemStack storedMealStack = inventory.getStackInSlot(MEAL_DISPLAY_SLOT);
 				if (storedMealStack.isEmpty()) {
 					return true;
-				} else if (!storedMealStack.sameItem(resultStack)) {
+				} else if (!ItemStack.isSameItem(storedMealStack, resultStack)) {
 					return false;
 				} else if (storedMealStack.getCount() + resultStack.getCount() <= inventory.getSlotLimit(MEAL_DISPLAY_SLOT)) {
 					return true;
@@ -316,30 +339,37 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 
 		cookTime = 0;
 		mealContainerStack = recipe.getOutputContainer();
-		ItemStack resultStack = recipe.getResultItem();
+		ItemStack resultStack = recipe.getResultItem(this.level.registryAccess());
 		ItemStack storedMealStack = inventory.getStackInSlot(MEAL_DISPLAY_SLOT);
 		if (storedMealStack.isEmpty()) {
 			inventory.setStackInSlot(MEAL_DISPLAY_SLOT, resultStack.copy());
-		} else if (storedMealStack.sameItem(resultStack)) {
+		} else if (ItemStack.isSameItem(storedMealStack, resultStack)) {
 			storedMealStack.grow(resultStack.getCount());
 		}
 		tripodVesselForMakingPillsOfImmortality.setRecipeUsed(recipe);
 
 		for (int i = 0; i < MEAL_DISPLAY_SLOT; ++i) {
 			ItemStack slotStack = inventory.getStackInSlot(i);
-			if (slotStack.hasContainerItem()) {
-				Direction direction = getBlockState().getValue(TvfmpoiBlock.FACING).getCounterClockWise();
-				double x = worldPosition.getX() + 0.5 + (direction.getStepX() * 0.25);
-				double y = worldPosition.getY() + 0.7;
-				double z = worldPosition.getZ() + 0.5 + (direction.getStepZ() * 0.25);
-				ItemUtils.spawnItemEntity(level, inventory.getStackInSlot(i).getContainerItem(), x, y, z,
-						direction.getStepX() * 0.08F, 0.25F, direction.getStepZ() * 0.08F);
+			if (slotStack.hasCraftingRemainingItem()) {
+				ejectIngredientRemainder(slotStack.getCraftingRemainingItem());
+			} else if (INGREDIENT_REMAINDER_OVERRIDES.containsKey(slotStack.getItem())) {
+				ejectIngredientRemainder(INGREDIENT_REMAINDER_OVERRIDES.get(slotStack.getItem()).getDefaultInstance());
 			}
 			if (!slotStack.isEmpty())
 				slotStack.shrink(1);
 		}
 		return true;
 	}
+
+	protected void ejectIngredientRemainder(ItemStack remainderStack) {
+		Direction direction = getBlockState().getValue(TvfmpoiBlock.FACING).getCounterClockWise();
+		double x = worldPosition.getX() + 0.5 + (direction.getStepX() * 0.25);
+		double y = worldPosition.getY() + 0.7;
+		double z = worldPosition.getZ() + 0.5 + (direction.getStepZ() * 0.25);
+		ItemUtils.spawnItemEntity(level, remainderStack, x, y, z,
+				direction.getStepX() * 0.08F, 0.25F, direction.getStepZ() * 0.08F);
+	}
+
 
 	@Override
 	public void setRecipeUsed(@Nullable Recipe<?> recipe) {
@@ -356,8 +386,8 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 	}
 
 	@Override
-	public void awardUsedRecipes(Player player) {
-		List<Recipe<?>> usedRecipes = getUsedRecipesAndPopExperience(player.level, player.position());
+	public void awardUsedRecipes(Player player, List<ItemStack> items) {
+		List<Recipe<?>> usedRecipes = getUsedRecipesAndPopExperience(player.level(), player.position());
 		player.awardRecipes(usedRecipes);
 		usedRecipeTracker.clear();
 	}
@@ -448,15 +478,15 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 	}
 
 	private boolean doesMealHaveContainer(ItemStack meal) {
-		return !mealContainerStack.isEmpty() || meal.hasContainerItem();
+		return !mealContainerStack.isEmpty() || meal.hasCraftingRemainingItem();
 	}
 
 	public boolean isContainerValid(ItemStack containerItem) {
 		if (containerItem.isEmpty()) return false;
 		if (!mealContainerStack.isEmpty()) {
-			return mealContainerStack.sameItem(containerItem);
+			return ItemStack.isSameItem(mealContainerStack, containerItem);
 		} else {
-			return getMeal().getContainerItem().sameItem(containerItem);
+			return ItemStack.isSameItem(getMeal(), containerItem);
 		}
 	}
 
@@ -488,7 +518,7 @@ public class TvfmpoitBlockEntity extends SyncedBlockEntity implements MenuProvid
 	@Override
 	@Nonnull
 	public <T> LazyOptional<T> getCapability(Capability<T> cap, @Nullable Direction side) {
-		if (cap.equals(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)) {
+		if (cap.equals(ForgeCapabilities.ITEM_HANDLER)) {
 			if (side == null || side.equals(Direction.UP)) {
 				return inputHandler.cast();
 			} else {

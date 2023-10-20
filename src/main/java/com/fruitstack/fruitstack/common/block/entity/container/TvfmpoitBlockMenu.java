@@ -38,7 +38,7 @@ public class TvfmpoitBlockMenu extends RecipeBookMenu<RecipeWrapper>
 		this.tileEntity = tileEntity;
 		this.inventory = tileEntity.getInventory();
 		this.tripodVesselForMakingPillsOfImmortalityData = tripodVesselForMakingPillsOfImmortalityDataIn;
-		this.level = playerInventory.player.level;
+		this.level = playerInventory.player.level();
 		this.canInteractWithCallable = ContainerLevelAccess.create(tileEntity.getLevel(), tileEntity.getBlockPos());
 
 		int startX = 8;
@@ -83,7 +83,7 @@ public class TvfmpoitBlockMenu extends RecipeBookMenu<RecipeWrapper>
 	private static TvfmpoitBlockEntity getTileEntity(final Inventory playerInventory, final FriendlyByteBuf data) {
 		Objects.requireNonNull(playerInventory, "playerInventory cannot be null");
 		Objects.requireNonNull(data, "data cannot be null");
-		final BlockEntity tileAtPos = playerInventory.player.level.getBlockEntity(data.readBlockPos());
+		final BlockEntity tileAtPos = playerInventory.player.level().getBlockEntity(data.readBlockPos());
 		if (tileAtPos instanceof TvfmpoitBlockEntity) {
 			return (TvfmpoitBlockEntity) tileAtPos;
 		}

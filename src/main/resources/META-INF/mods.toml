@@ -4,10 +4,10 @@ license="MIT License"
 issueTrackerURL="https://github.com/fruitstack/fruitstack/issues"
 [[mods]] #mandatory
 modId="fruitstack" #mandatory
-version="1.18.2-1.7.6" #mandatory
+version="1.20.1-1.7.6" #mandatory
 displayName="果栈丰萦（Fruit Stack）" #mandatory
 # updateJSONURL=""
-displayURL="https://github.com/Mangopill/Fruit-Stack"
+displayURL="https://github.com/fruitstack/fruitstack"
 logoFile="logo.png"
 logoBlur=false
 itemIcon="fruitstack:blueberries"
@@ -33,6 +33,6 @@ description='''
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.2,)"
+    versionRange="[1.20.1,)"
     ordering="NONE"
     side="BOTH"

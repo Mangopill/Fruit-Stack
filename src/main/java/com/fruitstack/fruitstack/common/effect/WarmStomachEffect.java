@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.PowderSnowBlock;
 import net.minecraft.world.level.block.state.BlockState;
-
 import net.minecraft.world.level.block.Blocks;
 
 public class WarmStomachEffect extends MobEffect {
@@ -18,8 +17,8 @@ public class WarmStomachEffect extends MobEffect {
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
         BlockPos blockPos = entity.blockPosition().below();
-        BlockState state = entity.level.getBlockState(blockPos);;
-        Level level = entity.level; // 获取玩家所在的世界对象
+        BlockState state = entity.level().getBlockState(blockPos);;
+        Level level = entity.level(); // 获取玩家所在的世界对象
         if (state.getBlock() instanceof PowderSnowBlock) {
             level.setBlock(blockPos, Blocks.SNOW_BLOCK.defaultBlockState(), 3);
         }

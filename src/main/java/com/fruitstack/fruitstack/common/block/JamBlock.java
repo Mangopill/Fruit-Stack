@@ -139,7 +139,7 @@ public class JamBlock extends Block
 				return InteractionResult.SUCCESS;
 			}
 			if (!(heldStack.getItem() == ModItems.DOUGHNUT.get()) && !(heldStack.getItem() == Items.BREAD)) {
-				player.displayClientMessage(TextUtils.getTranslation("block.jamblock.use_container", serving.getContainerItem().getHoverName()), true);
+				player.displayClientMessage(TextUtils.getTranslation("block.jamblock.use_container", serving.getCraftingRemainingItem().getHoverName()), true);
 			}
 		}
 		return InteractionResult.PASS;
@@ -158,7 +158,7 @@ public class JamBlock extends Block
 
 	@Override
 	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-		return level.getBlockState(pos.below()).getMaterial().isSolid();
+		return level.getBlockState(pos.below()).isSolid();
 	}
 
 	@Override

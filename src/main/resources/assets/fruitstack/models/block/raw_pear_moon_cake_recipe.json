@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/raw_pear_moon_cake_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/raw_pear_moon_cake_recipe"
+      "0": "fruitstack:block/raw_pear_moon_cake_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/raw_pear_moon_cake_recipe"
     }
   }
   

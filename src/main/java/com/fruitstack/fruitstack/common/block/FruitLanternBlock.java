@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
@@ -57,7 +57,7 @@ public class FruitLanternBlock extends Block implements SimpleWaterloggedBlock {
     protected static final VoxelShape AABB = Shapes.or(Block.box(4.0D, 1.0D, 4.0D, 12.0D, 5.0D, 12.0D));
     protected static final VoxelShape HANGING_AABB = Shapes.or(Block.box(6.0D, 1.0D, 6.0D, 10.0D, 14.0D, 10.0D));
     public FruitLanternBlock() {
-        super(Properties.of(Material.WOOD).strength(1.0f).lightLevel((p_187433_) -> {
+        super(Properties.of().mapColor(MapColor.WOOD).strength(1.0f).lightLevel((p_187433_) -> {
             return 15;
         }).noOcclusion());
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HANGING, Boolean.valueOf(false)).setValue(WATERLOGGED, Boolean.valueOf(false)));

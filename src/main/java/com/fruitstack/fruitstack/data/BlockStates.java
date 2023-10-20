@@ -8,6 +8,7 @@ import com.fruitstack.fruitstack.fruitstack;
 import com.google.common.collect.Sets;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoublePlantBlock;
@@ -21,6 +22,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -33,12 +35,12 @@ public class BlockStates extends BlockStateProvider
 {
 	private static final int DEFAULT_ANGLE_OFFSET = 180;
 
-	public BlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
-		super(gen, fruitstack.MODID, exFileHelper);
+	public BlockStates(PackOutput output, ExistingFileHelper exFileHelper) {
+		super(output, fruitstack.MODID, exFileHelper);
 	}
 
 	private String blockName(Block block) {
-		return block.getRegistryName().getPath();
+		return ForgeRegistries.BLOCKS.getKey(block).getPath();
 	}
 
 	public ResourceLocation resourceBlock(String path) {

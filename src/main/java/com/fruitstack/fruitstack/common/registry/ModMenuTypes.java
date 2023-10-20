@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModMenuTypes
 {
-	public static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.CONTAINERS, fruitstack.MODID);
+	public static final DeferredRegister<MenuType<?>> MENU_TYPES = DeferredRegister.create(ForgeRegistries.MENU_TYPES, fruitstack.MODID);
 
 	public static final RegistryObject<MenuType<TvfmpoitBlockMenu>> TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY = MENU_TYPES
 			.register("tvfmpoit", () -> IForgeMenuType.create(TvfmpoitBlockMenu::new));

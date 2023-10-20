@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/ground_cucumber_milk_tea_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/ground_cucumber_milk_tea_recipe"
+      "0": "fruitstack:block/ground_cucumber_milk_tea_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/ground_cucumber_milk_tea_recipe"
     }
   }
   

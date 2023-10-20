@@ -41,7 +41,7 @@ public class ModEventHandler {
         // 检查实体是否为玩家
         if (event.getEntity() instanceof Player) {
             Player player = (Player) event.getEntity();
-            Level world = player.level;
+            Level world = player.level();
             // 创建掉落物实体对象并添加到游戏世界中
             ItemStack itemStack = new ItemStack(ModItems.CORPSE.get());
             ItemEntity itemEntity = new ItemEntity(world, player.getX(), player.getY(), player.getZ(), itemStack);
@@ -53,7 +53,7 @@ public class ModEventHandler {
     public static void onVillagerDeath(LivingDeathEvent event) {
         if (event.getEntity() instanceof Villager) {
             Villager villager = (Villager) event.getEntity();
-            Level world = villager.level;
+            Level world = villager.level();
 
             // 创建掉落物实体对象并添加到游戏世界中
             ItemStack itemStack = new ItemStack(ModItems.CORPSE.get());

@@ -10,7 +10,7 @@ import com.google.common.collect.ImmutableList;
 import net.minecraft.client.RecipeBookCategories;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.client.RecipeBookRegistry;
+import net.minecraftforge.client.event.RegisterRecipeBookCategoriesEvent;
 
 import java.util.function.Supplier;
 
@@ -21,18 +21,13 @@ public class RecipeCategories
 	public static final Supplier<RecipeBookCategories> COOKING_DRINKS = Suppliers.memoize(() -> RecipeBookCategories.create("COOKING_DRINKS", new ItemStack(ModItems.MANGO_JAM.get())));
 	public static final Supplier<RecipeBookCategories> COOKING_MISC = Suppliers.memoize(() -> RecipeBookCategories.create("COOKING_MISC", new ItemStack(ModItems.APRICOT_RICE_DUMPLING.get()), new ItemStack(ModItems.APRICOT_RICE_DUMPLING.get())));
 
-	public static void init() {
-		RecipeBookRegistry.addCategoriesToType(fruitstack.RECIPE_TYPE_COOKING, ImmutableList.of(COOKING_SEARCH.get(), COOKING_MEALS.get(), COOKING_DRINKS.get(), COOKING_MISC.get()));
-		RecipeBookRegistry.addAggregateCategories(COOKING_SEARCH.get(), ImmutableList.of(COOKING_MEALS.get(), COOKING_DRINKS.get(), COOKING_MISC.get()));
-		RecipeBookRegistry.addCategoriesFinder(ModRecipeTypes.COOKING.get(), recipe ->
+	public static void init(RegisterRecipeBookCategoriesEvent event) {
+		event.registerBookCategories(fruitstack.RECIPE_TYPE_COOKING, ImmutableList.of(COOKING_SEARCH.get(), COOKING_MEALS.get(), COOKING_DRINKS.get(), COOKING_MISC.get()));
+		event.registerAggregateCategory(COOKING_SEARCH.get(), ImmutableList.of(COOKING_MEALS.get(), COOKING_DRINKS.get(), COOKING_MISC.get()));
+		event.registerRecipeCategoryFinder(ModRecipeTypes.COOKING.get(), recipe ->
 		{
 			if (recipe instanceof TvfmpoitRecipe cookingRecipe) {
 				return null;
-			}
-
-			// If no tab is specified in recipe, this fallback organizes them instead
-			if (recipe.getResultItem().getItem() instanceof DrinkableItem) {
-				return COOKING_DRINKS.get();
 			}
 			return COOKING_MISC.get();
 		});

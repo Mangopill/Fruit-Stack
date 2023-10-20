@@ -2,6 +2,7 @@ package com.fruitstack.fruitstack.common.block;
 
 import com.fruitstack.fruitstack.common.block.entity.ClayOvenBlockEntity;
 import com.fruitstack.fruitstack.common.registry.ModBlockEntityTypes;
+import com.fruitstack.fruitstack.common.registry.ModDamageTypes;
 import com.fruitstack.fruitstack.common.registry.ModSounds;
 import com.fruitstack.fruitstack.common.utility.MathUtils;
 import com.fruitstack.fruitstack.common.utility.ItemUtils;
@@ -11,6 +12,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleContainer;
@@ -32,7 +34,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,13 +48,11 @@ import java.util.Random;
 @SuppressWarnings("deprecation")
 public class ClayOvenBlock extends BaseEntityBlock
 {
-	public static final DamageSource CLAY_OVEN_DAMAGE = (new DamageSource(fruitstack.MODID + ".clay_oven")).setIsFire();
-
 	public static final BooleanProperty LIT = BlockStateProperties.LIT;
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
 	public ClayOvenBlock(Properties properties) {
-		super(Properties.of(Material.STONE)
+		super(Properties.of().mapColor(MapColor.STONE)
 				.strength(2F, 6.0F)
 				.sound(SoundType.STONE));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(LIT, false));
@@ -134,7 +134,7 @@ public class ClayOvenBlock extends BaseEntityBlock
 	public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
 		boolean isLit = level.getBlockState(pos).getValue(ClayOvenBlock.LIT);
 		if (isLit && !entity.fireImmune() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity) entity)) {
-			entity.hurt(CLAY_OVEN_DAMAGE, 1.0F);
+			entity.hurt(ModDamageTypes.getSimpleDamageSource(level, ModDamageTypes.CLAYOVEN_BURN), 1.0F);
 		}
 
 		super.stepOn(level, pos, state, entity);
@@ -159,7 +159,7 @@ public class ClayOvenBlock extends BaseEntityBlock
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState stateIn, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState stateIn, Level level, BlockPos pos, RandomSource rand) {
 		if (stateIn.getValue(CampfireBlock.LIT)) {
 			double x = (double) pos.getX() + 0.5D;
 			double y = pos.getY();
@@ -186,7 +186,7 @@ public class ClayOvenBlock extends BaseEntityBlock
 	}
 	@Nullable
 	@Override
-	public BlockPathTypes getAiPathNodeType(BlockState state, BlockGetter world, BlockPos pos, @Nullable Mob entity) {
+	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, @Nullable Mob entity) {
 		return state.getValue(LIT) ? BlockPathTypes.DAMAGE_FIRE : null;
 	}
 

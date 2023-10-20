@@ -1,0 +1,9 @@
+{
+  "type": "fruitstack:add_features_by_filter",
+  "allowed_biomes": "#minecraft:is_overworld",
+  "denied_biomes": ["minecraft:plains", "minecraft:forest"],
+  "min_temperature": 0.1,
+  "max_temperature": 0.9,
+  "features": "fruitstack:patch_wild_zong_zi_leaves",
+  "step": "vegetal_decoration"
+}

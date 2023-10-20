@@ -18,6 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -41,7 +42,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -54,7 +55,6 @@ import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Properties;
 import java.util.Random;
 
 @SuppressWarnings("deprecation")
@@ -68,7 +68,7 @@ public class TvfmpoiBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 	protected static final VoxelShape SHAPE_WITH_TRAY = Shapes.or(SHAPE, Block.box(0.0D, -1.0D, 0.0D, 16.0D, 0.0D, 16.0D));
 
 	public TvfmpoiBlock() {
-		super(Properties.of(Material.METAL)
+		super(Properties.of().mapColor(MapColor.METAL)
 				.strength(0.5F, 6.0F)
 				.sound(SoundType.LANTERN));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(SUPPORT, TvfmpoiSupport.NONE).setValue(WATERLOGGED, false));
@@ -92,7 +92,7 @@ public class TvfmpoiBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 					}
 					level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
 				} else {
-					NetworkHooks.openGui((ServerPlayer) player, tvfmpoitBlockEntity, pos);
+					NetworkHooks.openScreen((ServerPlayer) player, tvfmpoitBlockEntity, pos);
 				}
 			}
 			return InteractionResult.SUCCESS;
@@ -217,7 +217,7 @@ public class TvfmpoiBlock extends BaseEntityBlock implements SimpleWaterloggedBl
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rand) {
 		BlockEntity tileEntity = level.getBlockEntity(pos);
 		if (tileEntity instanceof TvfmpoitBlockEntity tripodVesselForMakingPillsOfImmortalityEntity && tripodVesselForMakingPillsOfImmortalityEntity.isHeated()) {
 			SoundEvent boilSound = !tripodVesselForMakingPillsOfImmortalityEntity.getMeal().isEmpty()

@@ -6,6 +6,7 @@ import com.fruitstack.fruitstack.common.registry.ModItems;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -58,7 +59,7 @@ public class LowWoodenBarrelBlock extends Block {
     }
     public void fallOn(Level p_152426_, BlockState p_152427_, BlockPos p_152428_, Entity p_152429_, float p_152430_) {
         if (!p_152426_.isClientSide()) {
-            Random random = p_152426_.random;
+            RandomSource random = p_152426_.random;
 
             // 根据您的需求，这里设置方块增加age状态的几率为50%
             if (random.nextFloat() < 0.5f) {
@@ -70,7 +71,7 @@ public class LowWoodenBarrelBlock extends Block {
                 }
             }
         }
-        p_152429_.causeFallDamage(p_152430_, 1.0F, DamageSource.FALL);
+        p_152429_.causeFallDamage(p_152430_, 1.0F, p_152429_.damageSources().fall());
     }
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;

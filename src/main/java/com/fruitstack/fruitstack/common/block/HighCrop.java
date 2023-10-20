@@ -2,6 +2,7 @@ package com.fruitstack.fruitstack.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -71,7 +72,8 @@ public class HighCrop extends BaseCropBlock {
   }
 
 
-  public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random rand) {
+  @Override
+  public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
     if (!worldIn.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
     float f = getGrowthSpeed(this, worldIn, pos);
     int age = this.getAge(state);
@@ -95,7 +97,8 @@ public class HighCrop extends BaseCropBlock {
     }
   }
 
-  public boolean isValidBonemealTarget(BlockGetter worldIn, BlockPos pos, BlockState state, boolean isClient) {
+  @Override
+  public boolean isValidBonemealTarget(LevelReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
     BlockState upperState = worldIn.getBlockState(pos.above());
     if (upperState.is(this)) {
       return !(this.isMaxAge(upperState));
@@ -107,12 +110,14 @@ public class HighCrop extends BaseCropBlock {
   }
 
 
-  public boolean isBonemealSuccess(Level worldIn, Random rand, BlockPos pos, BlockState state) {
+  @Override
+  public boolean isBonemealSuccess(Level worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     return true;
   }
 
 
-  public void performBonemeal(ServerLevel worldIn, Random rand, BlockPos pos, BlockState state) {
+  @Override
+  public void performBonemeal(ServerLevel worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     int ageGrowth = Math.min(this.getAge(state) + this.getBonemealAgeIncrease(worldIn), 15);
     if (ageGrowth <= this.getMaxAge()) {
       worldIn.setBlockAndUpdate(pos, state.setValue(AGE, ageGrowth));

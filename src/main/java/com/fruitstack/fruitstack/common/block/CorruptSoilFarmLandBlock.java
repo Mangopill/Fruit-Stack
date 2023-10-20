@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -52,7 +53,7 @@ public class CorruptSoilFarmLandBlock extends FarmBlock
     }
 
     @Override
-    public void tick(BlockState state, ServerLevel level, BlockPos pos, Random rand) {
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource rand) {
         if (!state.canSurvive(level, pos)) {
             turnToRichSoil(state, level, pos);
         }
@@ -70,28 +71,29 @@ public class CorruptSoilFarmLandBlock extends FarmBlock
         BlockState blockState = world.getBlockState(pos.below());
         return blockState.getBlock() instanceof CropBlock;
     }
-    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
         int moistureLevel = state.getValue(MOISTURE);
-            if (!isNearWater(world, pos) && !world.isRainingAt(pos.above())) {
+            if (!isNearWater(worldIn, pos) && !worldIn.isRainingAt(pos.above())) {
                 if (moistureLevel > 0) {
-                    world.setBlock(pos, state.setValue(MOISTURE, moistureLevel - 1), 2);
-                } else if (!isUnderCrops(world, pos)) {
-                    turnToDirt(state, world, pos);
+                    worldIn.setBlock(pos, state.setValue(MOISTURE, moistureLevel - 1), 2);
+                } else if (!isUnderCrops(worldIn, pos)) {
+                    turnToDirt(state, worldIn, pos);
                     return;
                 }
             } else if (moistureLevel < 7) {
-                world.setBlock(pos, state.setValue(MOISTURE, 7), 2);
+                worldIn.setBlock(pos, state.setValue(MOISTURE, 7), 2);
             }
             BlockPos abovePos = pos.above();
-            BlockState cropState = world.getBlockState(abovePos);
+            BlockState cropState = worldIn.getBlockState(abovePos);
             Block cropBlock = cropState.getBlock();
         if (cropBlock instanceof CropBlock && !(cropBlock == ModBlocks.CORRUPT_CROP.get())) {
-            int randomNumber = random.nextInt(100);
+            int randomNumber = rand.nextInt(100);
 
             if (randomNumber < 60) {
-                world.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+                worldIn.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
             } else {
-                world.setBlock(pos.above(), ModBlocks.CORRUPT_CROP.get().defaultBlockState(), 3);
+                worldIn.setBlock(pos.above(), ModBlocks.CORRUPT_CROP.get().defaultBlockState(), 3);
             }
         }
     }

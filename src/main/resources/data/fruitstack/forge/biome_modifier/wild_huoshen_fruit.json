@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:desert",
+  "features": "fruitstack:patch_wild_huoshen_fruit",
+  "step": "vegetal_decoration"
+}

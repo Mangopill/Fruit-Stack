@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -28,7 +28,7 @@ public class GrapeRecipeBlock extends Block {
     public final static VoxelShape WEST_SHAPE = Block.box(0, 0, 1, 1.5, 16, 15);
 
     public GrapeRecipeBlock(boolean acquirableViaPackage) {
-        super(Properties.of(Material.WOOD).strength(1.0f).noOcclusion());
+        super(Properties.of().mapColor(MapColor.WOOD).strength(1.0f).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
         this.acquirableViaPackage = acquirableViaPackage;
     }

@@ -7,6 +7,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -72,10 +73,10 @@ public class GrapeBottomBlock extends Block {
         builder.add(AGE);
         super.createBlockStateDefinition(builder);
     }
-
-    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
         if (!worldIn.isClientSide) {
-            if (random.nextFloat() <= 0.1F) {
+            if (rand.nextFloat() <= 0.1F) {
                 int age = state.getValue(AGE);
                 if (age == 0) {
                     worldIn.setBlock(pos, state.setValue(AGE, 1), 3);

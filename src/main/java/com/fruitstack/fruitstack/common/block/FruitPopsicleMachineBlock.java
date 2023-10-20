@@ -14,6 +14,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -116,6 +117,7 @@ public class FruitPopsicleMachineBlock extends Block
 	public boolean isRandomlyTicking(BlockState state) {
 		return true;
 	}
+	@Override
 	public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
 		return !level.isEmptyBlock(pos.below());
 	}
@@ -123,8 +125,8 @@ public class FruitPopsicleMachineBlock extends Block
 		builder.add(FACING, AGE);
 		super.createBlockStateDefinition(builder);
 	}
-
-	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+    @Override
+	public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
 		if (!worldIn.isClientSide) {
 			if (isDaytime(worldIn) && !worldIn.isRaining() && worldIn.canSeeSky(pos)) {
 				if (worldIn.canSeeSky(pos)) {
@@ -140,7 +142,7 @@ public class FruitPopsicleMachineBlock extends Block
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState stateIn, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState stateIn, Level level, BlockPos pos, RandomSource rand) {
 		if (isDaytime(level) && !level.isRaining() && level.canSeeSky(pos)) {
 			if (level.canSeeSky(pos)) {
 				double x = (double) pos.getX() + 0.5D;

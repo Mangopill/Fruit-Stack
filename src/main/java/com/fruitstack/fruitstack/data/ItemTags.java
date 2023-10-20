@@ -3,27 +3,32 @@ package com.fruitstack.fruitstack.data;
 import com.fruitstack.fruitstack.common.registry.ModItems;
 import com.fruitstack.fruitstack.common.tag.ForgeTags;
 import com.fruitstack.fruitstack.common.tag.ModTags;
+import com.fruitstack.fruitstack.fruitstack;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
 public class ItemTags extends ItemTagsProvider
 {
-	public ItemTags(DataGenerator generatorIn, BlockTagsProvider blockTagProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-		super(generatorIn, blockTagProvider, modId, existingFileHelper);
+	public ItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, CompletableFuture<TagsProvider.TagLookup<Block>> blockTagProvider, @Nullable ExistingFileHelper existingFileHelper) {
+		super(output, provider, blockTagProvider, fruitstack.MODID, existingFileHelper);
 	}
 
 	@Override
-	protected void addTags() {
+	protected void addTags(HolderLookup.Provider provider) {
 		copy(ModTags.FRUIT_BLOCK_CAN_MINE, ModTags.FRUIT_SLICE);
-		copy(BlockTags.CARPETS, net.minecraft.tags.ItemTags.CARPETS);
 		copy(BlockTags.SMALL_FLOWERS, net.minecraft.tags.ItemTags.SMALL_FLOWERS);
 
 		tag(net.minecraft.tags.ItemTags.TALL_FLOWERS).add(ModItems.GLUTINOUS_RICE.get());

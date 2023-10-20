@@ -1,8 +1,9 @@
 package com.fruitstack.fruitstack.common.block.entity;
 
 import com.fruitstack.fruitstack.common.block.ClayOvenBlock;
-import com.fruitstack.fruitstack.common.core.NewRecipeManager;
+import com.fruitstack.fruitstack.common.mixin.accessor.RecipeManagerAccessor;
 import com.fruitstack.fruitstack.common.registry.ModBlockEntityTypes;
+import com.fruitstack.fruitstack.common.registry.ModRecipeTypes;
 import com.fruitstack.fruitstack.common.utility.ItemUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,6 +25,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.items.wrapper.RecipeWrapper;
 
 import java.util.Optional;
 
@@ -127,7 +129,7 @@ public class ClayOvenBlockEntity extends SyncedBlockEntity
 					Container inventoryWrapper = new SimpleContainer(calyovenStack);
 					Optional<CampfireCookingRecipe> recipe = getMatchingRecipe(inventoryWrapper, i);
 					if (recipe.isPresent()) {
-						ItemStack resultStack = recipe.get().getResultItem();
+						ItemStack resultStack = recipe.get().getResultItem(level.registryAccess());
 						if (!resultStack.isEmpty()) {
 							ItemUtils.spawnItemEntity(level, resultStack.copy(),
 									worldPosition.getX() + 0.5, worldPosition.getY() + 1.0, worldPosition.getZ() + 0.5,
@@ -174,8 +176,8 @@ public class ClayOvenBlockEntity extends SyncedBlockEntity
 		if (level == null) return Optional.empty();
 
 		if (lastRecipeIDs[slot] != null) {
-			NewRecipeManager recipeManager = new NewRecipeManager();
-			Recipe<Container> recipe = recipeManager.fruitstack_invokeGetRecipeMap(RecipeType.CAMPFIRE_COOKING)
+			Recipe<Container> recipe = ((RecipeManagerAccessor) level.getRecipeManager())
+					.getRecipeMap(RecipeType.CAMPFIRE_COOKING)
 					.get(lastRecipeIDs[slot]);
 			if (recipe instanceof CampfireCookingRecipe && recipe.matches(recipeWrapper, level)) {
 				return Optional.of((CampfireCookingRecipe) recipe);

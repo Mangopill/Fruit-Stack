@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/red_fruit_maythorn_cake_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/red_fruit_maythorn_cake_recipe"
+      "0": "fruitstack:block/red_fruit_maythorn_cake_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/red_fruit_maythorn_cake_recipe"
     }
   }
   

@@ -15,9 +15,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 
 public class BeatingMelonsItem extends Item {
 	public BeatingMelonsItem(Properties properties) {
@@ -28,9 +29,10 @@ public class BeatingMelonsItem extends Item {
 	public InteractionResult useOn(UseOnContext context) {
 		BlockPos clickedPos = context.getClickedPos();
 		BlockState clickedBlockState = context.getLevel().getBlockState(clickedPos);
+		BlockGetter blockGetter = context.getLevel();
 		Player player = context.getPlayer();
 
-		if (clickedBlockState.getMaterial() == Material.STONE || clickedBlockState.getMaterial() == Material.WOOD) {
+		if (clickedBlockState.getMapColor(blockGetter,clickedPos) == MapColor.STONE || clickedBlockState.getMapColor(blockGetter,clickedPos) == MapColor.WOOD) {
 			ItemStack heldStack = context.getItemInHand();
 			heldStack.shrink(1);
 			player.getInventory().add(new ItemStack(ModItems.BEATING_MELONS_SLICE.get(), 2));

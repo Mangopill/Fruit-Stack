@@ -3,6 +3,7 @@ package com.fruitstack.fruitstack.data;
 import com.fruitstack.fruitstack.fruitstack;
 import com.google.common.collect.Sets;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,8 +25,8 @@ public class ItemModels extends ItemModelProvider
 	public static final String HANDHELD = "item/handheld";
 	public static final ResourceLocation MUG = new ResourceLocation(fruitstack.MODID, "item/mug");
 
-	public ItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-		super(generator, fruitstack.MODID, existingFileHelper);
+	public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
+		super(output, fruitstack.MODID, existingFileHelper);
 	}
 
 	@Override
@@ -51,7 +52,7 @@ public class ItemModels extends ItemModelProvider
 	}
 
 	private String itemName(Item item) {
-		return item.getRegistryName().getPath();
+		return ForgeRegistries.ITEMS.getKey(item).getPath();
 	}
 
 	public ResourceLocation resourceBlock(String path) {

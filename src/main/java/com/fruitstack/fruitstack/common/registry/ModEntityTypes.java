@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEntityTypes
 {
-	public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, fruitstack.MODID);
+	public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, fruitstack.MODID);
 
 	public static final RegistryObject<EntityType<RawMoonCakeEntity>> RAW_BLUEBERRIES_MOON_CAKE = ENTITIES.register("raw_blueberries_moon_cake", () -> (
 			EntityType.Builder.<RawMoonCakeEntity>of(RawMoonCakeEntity::new, MobCategory.MISC)
