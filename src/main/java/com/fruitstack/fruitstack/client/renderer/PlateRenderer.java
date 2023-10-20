@@ -50,10 +50,7 @@ public class PlateRenderer implements BlockEntityRenderer<PlateBlockEntity> {
 				poseStack.scale(0.375F, 0.375F, 0.375F);
 
 				if (PlateBlockEntity.getLevel() != null)
-					Minecraft.getInstance().getItemRenderer().renderStatic(plateStack,
-							ItemTransforms.TransformType.FIXED,
-							LevelRenderer.getLightColor(PlateBlockEntity.getLevel(), PlateBlockEntity.getBlockPos().above()),
-							combinedOverlayIn, poseStack, buffer, posLong + i);
+					Minecraft.getInstance().getItemRenderer().renderStatic(plateStack, ItemTransforms.TransformType.FIXED, LevelRenderer.getLightColor(PlateBlockEntity.getLevel(), PlateBlockEntity.getBlockPos().above()), combinedOverlayIn, poseStack, buffer, posLong + i);
 				poseStack.popPose();
 			}
 		}

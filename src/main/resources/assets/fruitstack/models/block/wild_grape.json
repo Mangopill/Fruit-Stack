@@ -6,6 +6,7 @@
 		"3": "fruitstack:item/grape",
 		"particle": "fruitstack:item/grape"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [2, 14, 0],

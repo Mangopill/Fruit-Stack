@@ -13,7 +13,7 @@ import net.minecraft.client.particle.SplashParticle;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -32,7 +32,7 @@ public class ClientSetupEvents
 		event.registerBlockEntityRenderer(ModBlockEntityTypes.BOWL_BLOCK.get(), BowlBlockRenderer::new);
 	}
 	@SubscribeEvent(priority = EventPriority.LOWEST)
-	public static void registerParticles(ParticleFactoryRegisterEvent event) {
+	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		Minecraft.getInstance().particleEngine.register(ModParticleTypes.STEAM.get(), SteamParticle.Factory::new);
 		Minecraft.getInstance().particleEngine.register(ModParticleTypes.OIL.get(), SplashParticle.Provider::new);
 	}

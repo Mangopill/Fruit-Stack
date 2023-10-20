@@ -8,6 +8,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -19,7 +20,6 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.items.wrapper.RecipeWrapper;
-import net.minecraftforge.registries.ForgeRegistryEntry;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
@@ -45,8 +45,8 @@ public class JuicerRecipe implements Recipe<RecipeWrapper>
 
 		if (!container.isEmpty()) {
 			this.container = container;
-		} else if (!output.getContainerItem().isEmpty()) {
-			this.container = output.getContainerItem();
+		} else if (!output.getCraftingRemainingItem().isEmpty()) {
+			this.container = output.getCraftingRemainingItem();
 		} else {
 			this.container = ItemStack.EMPTY;
 		}
@@ -127,7 +127,7 @@ public class JuicerRecipe implements Recipe<RecipeWrapper>
 		return new ItemStack(ModItems.TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY.get());
 	}
 
-	public static class Serializer extends ForgeRegistryEntry<RecipeSerializer<?>> implements RecipeSerializer<JuicerRecipe>
+	public static class Serializer implements RecipeSerializer<JuicerRecipe>
 	{
 		public Serializer() {
 		}

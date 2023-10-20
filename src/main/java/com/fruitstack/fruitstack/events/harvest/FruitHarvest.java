@@ -39,38 +39,34 @@ public class FruitHarvest {
 
 	@SubscribeEvent
 	public void onCropHarvest(RightClickBlock event) {
-		if (event.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).getItem() != Items.BONE_MEAL) {
+		if (event.getEntity().getItemBySlot(EquipmentSlot.MAINHAND).getItem() != Items.BONE_MEAL) {
 
-			BlockState state = event.getWorld().getBlockState(event.getPos());
+			BlockState state = event.getLevel().getBlockState(event.getPos());
 			Block block = state.getBlock();
 
 			if (block instanceof BlockFruitCrop) {
-				if (!event.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).isEmpty())
+				if (!event.getEntity().getItemBySlot(EquipmentSlot.MAINHAND).isEmpty())
 					event.setCanceled(true);
 
 				// Really need to move isMaxAge to an interface or something.
-				if ((block instanceof BlockFruitCrop && ((BlockFruitCrop) block).isMaxAge(state))) {
-					if (!event.getWorld().isClientSide()) {
-						List<ItemStack> drops = Block.getDrops(event.getWorld().getBlockState(event.getPos()),
-								(ServerLevel) event.getWorld(), event.getPos(),
-								event.getWorld().getBlockEntity(event.getPos()));
+				if (((BlockFruitCrop) block).isMaxAge(state)) {
+					if (!event.getLevel().isClientSide()) {
+						List<ItemStack> drops = Block.getDrops(event.getLevel().getBlockState(event.getPos()),
+								(ServerLevel) event.getLevel(), event.getPos(),
+								event.getLevel().getBlockEntity(event.getPos()));
 
-						for (int i = 0; i < drops.size(); i++) {
-							//if (drops.get(i).getItem() != getCropSeed(block))
-								event.getWorld()
-								.addFreshEntity(new ItemEntity(event.getWorld(), event.getPos().getX(),
-										event.getPos().getY(), event.getPos().getZ(),
-										drops.get(i)));
+						for(int i = 0; i < drops.size(); ++i) {
+							event.getLevel().addFreshEntity(new ItemEntity(event.getLevel(), (double)event.getPos().getX(), (double)event.getPos().getY(), (double)event.getPos().getZ(), (ItemStack)drops.get(i)));
 						}
 					}
 
-					event.getPlayer().causeFoodExhaustion(.05F);
-					event.getWorld().playSound((Player) null, event.getPos(), SoundEvents.CROP_BREAK,
-							SoundSource.BLOCKS, 1.0F, 0.8F + event.getWorld().random.nextFloat() * 0.4F);
-					event.getWorld().setBlock(event.getPos(), block.defaultBlockState(), 2);
+					event.getEntity().causeFoodExhaustion(0.05F);
+					event.getLevel().playSound((Player) null, event.getPos(), SoundEvents.CROP_BREAK,
+							SoundSource.BLOCKS, 1.0F, 0.8F + event.getLevel().random.nextFloat() * 0.4F);
+					event.getLevel().setBlock(event.getPos(), block.defaultBlockState(), 2);
 				}
 				
-				event.getPlayer().swing(InteractionHand.MAIN_HAND);
+				event.getEntity().swing(InteractionHand.MAIN_HAND);
 			}
 		}
 	}

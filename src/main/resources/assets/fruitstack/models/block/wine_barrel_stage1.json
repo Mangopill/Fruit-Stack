@@ -8,6 +8,7 @@
 		"4": "item/sugar",
 		"particle": "fruitstack:block/glass"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [2, 2, 1],

@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/litchi_cookie_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/litchi_cookie_recipe"
+      "0": "fruitstack:block/litchi_cookie_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/litchi_cookie_recipe"
     }
   }
   

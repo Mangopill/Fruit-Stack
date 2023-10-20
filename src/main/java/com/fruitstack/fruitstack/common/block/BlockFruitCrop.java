@@ -5,6 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -54,15 +55,15 @@ public class BlockFruitCrop extends Block implements BonemealableBlock {
   }
 
   @SuppressWarnings("deprecation")
-  public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
-    if (!state.canSurvive(worldIn, pos)) {
-      worldIn.destroyBlock(pos, true);
+  public void randomTick(BlockState state, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+    if (!state.canSurvive(pLevel, pPos)) {
+      pLevel.destroyBlock(pPos, true);
       return;
     }
-    super.tick(state, worldIn, pos, random);
+    super.tick(state, pLevel, pPos, pRandom);
     int i = state.getValue(AGE);
-    if (i < 7 && random.nextInt(5) == 0 && worldIn.getRawBrightness(pos.above(), 0) >= 9) {
-      worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(i + 1)), 2);
+    if (i < 7 && pRandom.nextInt(5) == 0 && pLevel.getRawBrightness(pPos.above(), 0) >= 9) {
+      pLevel.setBlock(pPos, state.setValue(AGE, Integer.valueOf(i + 1)), 2);
     }
 
 
@@ -78,7 +79,7 @@ public class BlockFruitCrop extends Block implements BonemealableBlock {
   }
 
   @Override
-  public boolean isBonemealSuccess(Level worldIn, Random rand, BlockPos pos, BlockState state) {
+  public boolean isBonemealSuccess(Level worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     return true;
   }
 
@@ -86,7 +87,7 @@ public class BlockFruitCrop extends Block implements BonemealableBlock {
     return Mth.nextInt(worldIn.random, 2, 5);
   }
 
-  public void growFruit(ServerLevel worldIn, Random rand, BlockPos pos, BlockState state) {
+  public void growFruit(ServerLevel worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     int i = this.getAge(state) + this.getBonemealAgeIncrease(worldIn);
     int j = this.getMaxAge();
     if (i > j) {
@@ -95,11 +96,6 @@ public class BlockFruitCrop extends Block implements BonemealableBlock {
 
     worldIn.setBlock(pos, this.withAge(i), 2);
   }
-
-
-
-
-
 
   @Override
   public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
@@ -112,8 +108,8 @@ public class BlockFruitCrop extends Block implements BonemealableBlock {
   }
 
   @Override
-  public void performBonemeal(ServerLevel p_225535_1_, Random p_225535_2_, BlockPos p_225535_3_, BlockState p_225535_4_) {
-    this.growFruit(p_225535_1_, p_225535_2_, p_225535_3_, p_225535_4_);
+  public void performBonemeal(ServerLevel p_225535_1_, RandomSource rand, BlockPos p_225535_3_, BlockState p_225535_4_) {
+    this.growFruit(p_225535_1_, rand, p_225535_3_, p_225535_4_);
 
   }
   public BlockState updateShape(BlockState stateIn, Direction facing, BlockState facingState, WorldGenLevel worldIn, BlockPos currentPos, BlockPos facingPos) {

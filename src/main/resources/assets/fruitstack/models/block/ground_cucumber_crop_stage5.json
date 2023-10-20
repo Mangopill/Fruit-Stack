@@ -2,6 +2,7 @@
     "parent": "block/crop",
     "textures": {
       "crop": "fruitstack:block/ground_cucumber_crop_stage5"
-    }
+    },
+    "render_type": "cutout_mipped"
   }
   

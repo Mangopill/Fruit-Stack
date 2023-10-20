@@ -2,6 +2,7 @@
     "parent": "block/cross",
     "textures": {
       "cross": "fruitstack:block/wild_golden_pure_sheep_horn_honey"
-    }
+    },
+    "render_type": "cutout_mipped"
   }
   

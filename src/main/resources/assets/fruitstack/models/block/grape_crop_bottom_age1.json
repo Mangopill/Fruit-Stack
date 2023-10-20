@@ -5,6 +5,7 @@
 		"1": "fruitstack:block/grape_vine",
 		"particle": "fruitstack:block/candied_haws_on_a_stick_stick"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [7, 0, 7],

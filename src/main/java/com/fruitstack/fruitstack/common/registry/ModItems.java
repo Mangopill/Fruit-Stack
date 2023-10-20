@@ -3,11 +3,17 @@ package com.fruitstack.fruitstack.common.registry;
 import com.fruitstack.fruitstack.common.FoodValues;
 import com.fruitstack.fruitstack.common.item.*;
 import com.fruitstack.fruitstack.fruitstack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Optional;
 
 @SuppressWarnings("unused")
 public class ModItems
@@ -1747,7 +1753,7 @@ public class ModItems
 			() -> new BlockItem(ModBlocks.PEACH_RICE_DUMPLING_BLOCK.get(), basicItem().stacksTo(1)));
 	public static final RegistryObject<Item> PEACH_RICE_DUMPLING = ITEMS.register("peach_rice_dumpling",
 			() -> new ConsumableItem(foodItem(FoodValues.PEACH_RICE_DUMPLING).tab(fruitstack.CREATIVE_TAB)));
-    //pizza
+	//pizza
 	public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin",
 			() -> new Item(new Item.Properties().tab(fruitstack.CREATIVE_TAB).stacksTo(1)));
 	public static final RegistryObject<Item> PIZZA_DOUGH = ITEMS.register("pizza_dough",
@@ -1812,9 +1818,9 @@ public class ModItems
 			() -> new Item(new Item.Properties().tab(fruitstack.CREATIVE_TAB).stacksTo(1)));
 	public static final RegistryObject<Item> OVEN = ITEMS.register("oven",
 			() -> new BlockItem(ModBlocks.OVEN.get(), basicItem()));
-    //farmland
-    public static final RegistryObject<Item> LIFE_DIRT = ITEMS.register("life_dirt",
-            () -> new BlockItem(ModBlocks.LIFE_DIRT.get(), new Item.Properties().tab(fruitstack.CREATIVE_TAB).stacksTo(64)));
+	//farmland
+	public static final RegistryObject<Item> LIFE_DIRT = ITEMS.register("life_dirt",
+			() -> new BlockItem(ModBlocks.LIFE_DIRT.get(), new Item.Properties().tab(fruitstack.CREATIVE_TAB).stacksTo(64)));
 	public static final RegistryObject<Item> LIFE_FARMLAND = ITEMS.register("life_farmland",
 			() -> new BlockItem(ModBlocks.LIFE_FARMLAND.get(), new Item.Properties().tab(fruitstack.CREATIVE_TAB).stacksTo(64)));
 	public static final RegistryObject<Item> CORRUPT_SOIL = ITEMS.register("corrupt_soil",

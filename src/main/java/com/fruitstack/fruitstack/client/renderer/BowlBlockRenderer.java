@@ -50,10 +50,7 @@ public class BowlBlockRenderer implements BlockEntityRenderer<BowlBlockEntity> {
 				poseStack.scale(0.2F, 0.2F, 0.2F);
 
 				if (BowlBlockEntity.getLevel() != null)
-					Minecraft.getInstance().getItemRenderer().renderStatic(bowlStack,
-							ItemTransforms.TransformType.FIXED,
-							LevelRenderer.getLightColor(BowlBlockEntity.getLevel(), BowlBlockEntity.getBlockPos().above()),
-							combinedOverlayIn, poseStack, buffer, posLong + i);
+					Minecraft.getInstance().getItemRenderer().renderStatic(bowlStack, ItemTransforms.TransformType.FIXED, LevelRenderer.getLightColor(BowlBlockEntity.getLevel(), BowlBlockEntity.getBlockPos().above()), combinedOverlayIn, poseStack, buffer, posLong + i);
 				poseStack.popPose();
 			}
 		}

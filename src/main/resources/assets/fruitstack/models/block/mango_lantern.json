@@ -6,6 +6,7 @@
 		"2": "fruitstack:block/fruit_lantern_inner",
 		"particle": "fruitstack:item/mango"
 	},
+    "render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 1, 5],

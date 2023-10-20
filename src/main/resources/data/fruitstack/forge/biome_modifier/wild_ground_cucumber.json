@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:desert",
+  "features": "fruitstack:patch_wild_ground_cucumber",
+  "step": "vegetal_decoration"
+}

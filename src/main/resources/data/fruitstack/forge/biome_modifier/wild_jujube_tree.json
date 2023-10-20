@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:forest",
+  "features": "fruitstack:patch_wild_jujube_tree",
+  "step": "vegetal_decoration"
+}

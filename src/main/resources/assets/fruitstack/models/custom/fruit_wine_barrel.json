@@ -3,6 +3,7 @@
 	"textures": {
 		"particle": "fruitstack:block/glass"
     },
+	"render_type": "translucent",
 	"elements": [
 		{
 			"from": [2, 2, 1],

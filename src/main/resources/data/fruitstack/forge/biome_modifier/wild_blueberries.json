@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:taiga",
+  "features": "fruitstack:patch_wild_blueberries",
+  "step": "vegetal_decoration"
+}

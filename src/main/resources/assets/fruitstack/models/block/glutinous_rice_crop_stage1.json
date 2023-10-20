@@ -4,6 +4,7 @@
 		"0": "fruitstack:block/glutinous_rice_crop_stage1",
 		"particle": "fruitstack:block/glutinous_rice_crop_stage1"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [5, 0, -4],

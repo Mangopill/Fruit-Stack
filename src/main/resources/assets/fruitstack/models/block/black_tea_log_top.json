@@ -6,6 +6,7 @@
 		"2": "fruitstack:block/black_tea_leaves",
 		"particle": "fruitstack:block/black_tea_log"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [7, 0, 7],

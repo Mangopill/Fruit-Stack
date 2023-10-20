@@ -23,7 +23,6 @@ public class ItemTags extends ItemTagsProvider
 	@Override
 	protected void addTags() {
 		copy(ModTags.FRUIT_BLOCK_CAN_MINE, ModTags.FRUIT_SLICE);
-		copy(BlockTags.CARPETS, net.minecraft.tags.ItemTags.CARPETS);
 		copy(BlockTags.SMALL_FLOWERS, net.minecraft.tags.ItemTags.SMALL_FLOWERS);
 
 		tag(net.minecraft.tags.ItemTags.TALL_FLOWERS).add(ModItems.GLUTINOUS_RICE.get());

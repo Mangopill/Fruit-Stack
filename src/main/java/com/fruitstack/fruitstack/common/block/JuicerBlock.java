@@ -18,6 +18,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -45,7 +46,6 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -54,8 +54,6 @@ import net.minecraftforge.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Properties;
-import java.util.Random;
 
 @SuppressWarnings("deprecation")
 public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlock
@@ -87,7 +85,7 @@ public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 					}
 					level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_GENERIC, SoundSource.BLOCKS, 1.0F, 1.0F);
 				} else {
-					NetworkHooks.openGui((ServerPlayer) player, juicerBlockEntity, pos);
+					NetworkHooks.openScreen((ServerPlayer) player, juicerBlockEntity, pos);
 				}
 			}
 			return InteractionResult.SUCCESS;
@@ -214,7 +212,7 @@ public class JuicerBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
 	}
 	@Override
 	@OnlyIn(Dist.CLIENT)
-	public void animateTick(BlockState state, Level level, BlockPos pos, Random rand) {
+	public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource rand) {
 		if (state.getValue(STAGE).equals(JuicerStage.STIR)) {
 			double x = (double) pos.getX() + 0.5D;
 			double y = pos.getY();

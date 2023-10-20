@@ -2,6 +2,7 @@
     "parent": "block/cross",
     "textures": {
       "cross": "fruitstack:block/hamimelon_stage7"
-    }
+    },
+    "render_type": "cutout_mipped"
   }
   

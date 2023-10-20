@@ -4,6 +4,7 @@ import com.fruitstack.fruitstack.common.block.entity.TvfmpoitBlockEntity;
 import com.fruitstack.fruitstack.common.registry.ModItems;
 import com.fruitstack.fruitstack.common.registry.ModRecipeSerializers;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
@@ -66,8 +67,8 @@ public class FoodServingRecipe extends CustomRecipe
 
 		for (int i = 0; i < remainders.size(); ++i) {
 			ItemStack selectedStack = container.getItem(i);
-			if (selectedStack.hasContainerItem()) {
-				remainders.set(i, selectedStack.getContainerItem());
+			if (selectedStack.hasCraftingRemainingItem()) {
+				remainders.set(i, selectedStack.getCraftingRemainingItem());
 			} else if (selectedStack.is(ModItems.TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY.get())) {
 				TvfmpoitBlockEntity.takeServingFromItem(selectedStack);
 				ItemStack newTripodVesselForMakingPillsOfImmortalityStack = selectedStack.copy();

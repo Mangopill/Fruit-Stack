@@ -10,6 +10,7 @@ import net.minecraft.nbt.TagParser;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -38,7 +39,7 @@ public class ChanceResult
 		return chance;
 	}
 
-	public ItemStack rollOutput(Random rand, int fortuneLevel) {
+	public ItemStack rollOutput(RandomSource rand, int fortuneLevel) {
 		int outputAmount = stack.getCount();
 		for (int roll = 0; roll < stack.getCount(); roll++)
 				outputAmount--;
@@ -52,7 +53,7 @@ public class ChanceResult
 	public JsonElement serialize() {
 		JsonObject json = new JsonObject();
 
-		ResourceLocation resourceLocation = stack.getItem().getRegistryName();
+		ResourceLocation resourceLocation = ForgeRegistries.ITEMS.getKey(stack.getItem());
 		json.addProperty("item", resourceLocation.toString());
 
 		int count = stack.getCount();

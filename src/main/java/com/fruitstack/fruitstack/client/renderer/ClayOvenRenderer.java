@@ -50,10 +50,7 @@ public class ClayOvenRenderer implements BlockEntityRenderer<ClayOvenBlockEntity
 				poseStack.scale(0.375F, 0.375F, 0.375F);
 
 				if (ClayOvenEntity.getLevel() != null)
-					Minecraft.getInstance().getItemRenderer().renderStatic(ClayOvenStack,
-							ItemTransforms.TransformType.FIXED,
-							LevelRenderer.getLightColor(ClayOvenEntity.getLevel(), ClayOvenEntity.getBlockPos().above()),
-							combinedOverlayIn, poseStack, buffer, posLong + i);
+					Minecraft.getInstance().getItemRenderer().renderStatic(ClayOvenStack, ItemTransforms.TransformType.FIXED, LevelRenderer.getLightColor(ClayOvenEntity.getLevel(), ClayOvenEntity.getBlockPos().above()), combinedOverlayIn, poseStack, buffer, posLong + i);
 				poseStack.popPose();
 			}
 		}

@@ -8,6 +8,7 @@
 		"5": "fruitstack:block/oil",
 		"particle": "fruitstack:block/frying_pan_bottom"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 0, 3],

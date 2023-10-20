@@ -13,8 +13,6 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.Properties;
-
 import javax.annotation.Nullable;
 
 public class GreenPlumRecipeBlock extends Block {

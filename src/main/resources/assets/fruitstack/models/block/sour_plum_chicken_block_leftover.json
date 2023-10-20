@@ -7,6 +7,7 @@
     "tray_top": "fruitstack:block/tray_top_leftover",
     "tray_bottom": "fruitstack:block/tray_top_sour_plum"
   },
+  "render_type": "cutout_mipped",
   "elements": [
     {
       "name": "ribcage_end",

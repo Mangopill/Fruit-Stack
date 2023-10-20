@@ -7,6 +7,7 @@
 		"5": "fruitstack:block/frying_pan_pot_cover",
 		"particle": "fruitstack:block/frying_pan_bottom"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 0, 3],

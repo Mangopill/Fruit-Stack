@@ -8,6 +8,7 @@
 		"particle": "fruitstack:item/beating_melons_seeds",
 		"2_0": "fruitstack:item/beating_melons_seeds"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 0, 3],

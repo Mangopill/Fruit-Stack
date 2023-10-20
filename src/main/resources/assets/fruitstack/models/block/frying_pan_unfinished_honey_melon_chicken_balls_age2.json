@@ -8,6 +8,7 @@
 		"5": "fruitstack:item/honey_melon_chicken_balls",
 		"particle": "fruitstack:block/frying_pan_bottom"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 0, 3],

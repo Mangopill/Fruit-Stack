@@ -1,69 +1,27 @@
 {
   "type": "minecraft:block",
-  "pools": [
+  "pools":
+  [
     {
-      "name": "pool1",
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "fruitstack:september_melon"
-        }
-      ]
-    },
-    {
-      "name": "pool2",
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "parameters": {
-                "extra": 1,
-                "probability": 0.5714286
-              }
-            }
-          ],
-          "name": "fruitstack:september_melon"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:block_state_property",
-          "block": "fruitstack:september_melon_crop",
-          "properties": {
-            "age": "7"
-          }
-        }
-      ]
-    },
-    {
-      "name": "pool3",
-      "rolls": 1.0,
-      "entries": [
+      "rolls": 1,
+      "entries":
+      [
         {
           "type": "minecraft:item",
           "name": "fruitstack:september_melon"
         }
       ],
-      "conditions": [
+      "conditions":
+      [
         {
           "condition": "minecraft:block_state_property",
           "block": "fruitstack:september_melon_crop",
-          "properties": {
+          "properties":
+          {
             "age": "7"
           }
         }
       ]
-    }
-  ],
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
     }
   ]
 }

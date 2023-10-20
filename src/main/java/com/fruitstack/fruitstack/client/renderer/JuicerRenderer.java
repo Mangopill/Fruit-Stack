@@ -12,7 +12,6 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.items.ItemStackHandler;
 
@@ -29,8 +28,8 @@ public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 		int posLong = (int) JuicerBlockEntity.getBlockPos().asLong();
 
 		for (int i = 0; i < inventory.getSlots(); ++i) {
-			ItemStack ClayOvenStack = inventory.getStackInSlot(i);
-			if (!ClayOvenStack.isEmpty()) {
+			ItemStack JuicerStack = inventory.getStackInSlot(i);
+			if (!JuicerStack.isEmpty()) {
 				poseStack.pushPose();
 
 				// Center item above the Juicer
@@ -51,10 +50,7 @@ public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 				poseStack.scale(0.375F, 0.375F, 0.375F);
 
 				if (JuicerBlockEntity.getLevel() != null)
-					Minecraft.getInstance().getItemRenderer().renderStatic(ClayOvenStack,
-							ItemTransforms.TransformType.FIXED,
-							LevelRenderer.getLightColor(JuicerBlockEntity.getLevel(), JuicerBlockEntity.getBlockPos().above()),
-							combinedOverlayIn, poseStack, buffer, posLong + i);
+					Minecraft.getInstance().getItemRenderer().renderStatic(JuicerStack, ItemTransforms.TransformType.FIXED, LevelRenderer.getLightColor(JuicerBlockEntity.getLevel(), JuicerBlockEntity.getBlockPos().above()), combinedOverlayIn, poseStack, buffer, posLong + i);
 				poseStack.popPose();
 			}
 		}

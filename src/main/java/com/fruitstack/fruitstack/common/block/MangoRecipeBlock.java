@@ -26,7 +26,7 @@ public class MangoRecipeBlock extends Block {
     public final static VoxelShape WEST_SHAPE = Block.box(0, 0, 1, 1.5, 16, 15);
 
     public MangoRecipeBlock(boolean acquirableViaPackage) {
-        super(Properties.of(Material.GRASS).strength(1.0f).noOcclusion());
+        super(Properties.of(Material.WOOD).strength(1.0f).noOcclusion());
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
         this.acquirableViaPackage = acquirableViaPackage;
     }

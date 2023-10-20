@@ -7,6 +7,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -73,10 +74,10 @@ public class BlackTeaCropBlock extends Block {
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         return level.getBlockState(pos.below()).is(Blocks.GRASS_BLOCK);
     }
-
-    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random random) {
+    @Override
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
         if (!worldIn.isClientSide) {
-            if (random.nextFloat() <= 0.1F) {
+            if (rand.nextFloat() <= 0.1F) {
                 worldIn.setBlock(pos.above(), this.blackTeaCropMiddle.get().defaultBlockState(), 3);
                 if(worldIn.getBlockState(pos.above()).is(this.blackTeaCropMiddle.get())) {
                     worldIn.setBlock(pos.above().above(), this.blackTeaCropTop.get().defaultBlockState(), 3);

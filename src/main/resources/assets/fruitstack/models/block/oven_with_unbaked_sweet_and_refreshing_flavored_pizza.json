@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"render_type": "minecraft:cutout",
+	"render_type": "cutout_mipped",
 	"textures": {
 		"0": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza",
 		"1": "fruitstack:block/oven_rack",

@@ -7,7 +7,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.PowderSnowBlock;
 import net.minecraft.world.level.block.state.BlockState;
-
 import net.minecraft.world.level.block.Blocks;
 
 public class WarmStomachEffect extends MobEffect {

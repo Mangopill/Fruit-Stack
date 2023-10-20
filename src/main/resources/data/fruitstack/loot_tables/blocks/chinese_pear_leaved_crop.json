@@ -1,57 +1,27 @@
 {
   "type": "minecraft:block",
-  "pools": [
+  "pools":
+  [
     {
       "rolls": 1,
-      "name": "chinese_pear_leaved_block0",
-      "entries": [
-	{
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:alternative",
-                  "terms": [
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
-                      }
-                    },
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "enchantments": [
-                          {
-                            "enchantment": "minecraft:silk_touch",
-                            "levels": {
-                              "min": 1
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ],
-              "name": "fruitstack:chinese_pear_leaved_block"
-            },
+      "entries":
+      [
         {
           "type": "minecraft:item",
           "name": "fruitstack:chinese_pear_leaved_block"
         }
       ],
-      "conditions": [
+      "conditions":
+      [
         {
-          "condition": "minecraft:survives_explosion"
+          "condition": "minecraft:block_state_property",
+          "block": "fruitstack:chinese_pear_leaved_crop",
+          "properties":
+          {
+            "age": "7"
+          }
         }
       ]
     }
   ]
-}
-]
 }

@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/golden_pure_sheep_horn_honey_jam_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/golden_pure_sheep_horn_honey_jam_recipe"
+      "0": "fruitstack:block/golden_pure_sheep_horn_honey_jam_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/golden_pure_sheep_horn_honey_jam_recipe"
     }
   }
   

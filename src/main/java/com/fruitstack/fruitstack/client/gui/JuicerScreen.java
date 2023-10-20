@@ -156,11 +156,11 @@ public class JuicerScreen extends AbstractContainerScreen<JuicerBlockMenu> imple
 		this.recipeBookComponent.recipesUpdated();
 	}
 
-	@Override
-	public void removed() {
-		this.recipeBookComponent.removed();
-		super.removed();
-	}
+//	@Override
+//	public void removed() {
+//		this.recipeBookComponent.removed();
+//		super.removed();
+//	}
 
 	@Override
 	@Nonnull

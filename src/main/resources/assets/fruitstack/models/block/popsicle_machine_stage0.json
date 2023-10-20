@@ -6,6 +6,7 @@
 		"3": "fruitstack:block/glass",
 		"particle": "fruitstack:block/popsicle_machine_side"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [0, 0, 12],

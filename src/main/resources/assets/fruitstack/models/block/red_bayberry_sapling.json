@@ -2,6 +2,7 @@
     "parent": "block/cross",
     "textures": {
       "cross": "fruitstack:item/red_bayberry_sapling"
-    }
+    },
+    "render_type": "cutout_mipped"
   }
   

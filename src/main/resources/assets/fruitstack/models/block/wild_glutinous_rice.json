@@ -6,6 +6,7 @@
 		"2": "block/grass_block_side",
 		"particle": "fruitstack:block/glutinous_rice_crop_panicles_stage3"
 	},
+    "render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [5, 0, 11],

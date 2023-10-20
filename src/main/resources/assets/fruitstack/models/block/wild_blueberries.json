@@ -2,6 +2,8 @@
     "parent": "block/cross",
     "textures": {
       "cross": "fruitstack:block/wild_blueberries"
-    }
+    },
+    "render_type": "cutout_mipped"
   }
+
   

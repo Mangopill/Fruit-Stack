@@ -57,7 +57,7 @@ public class FruitKnife extends DiggerItem
 	{
 		@SubscribeEvent
 		public static void onKnifeKnockback(LivingKnockBackEvent event) {
-			LivingEntity attacker = event.getEntityLiving().getKillCredit();
+			LivingEntity attacker = event.getEntity().getKillCredit();
 			ItemStack toolStack = attacker != null ? attacker.getItemInHand(InteractionHand.MAIN_HAND) : ItemStack.EMPTY;
 			if (toolStack.getItem() instanceof FruitKnife) {
 				event.setStrength(event.getOriginalStrength() - 0.1F);

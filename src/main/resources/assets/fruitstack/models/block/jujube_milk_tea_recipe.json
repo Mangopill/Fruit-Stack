@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/jujube_milk_tea_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/jujube_milk_tea_recipe"
+      "0": "fruitstack:block/jujube_milk_tea_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/jujube_milk_tea_recipe"
     }
   }
   

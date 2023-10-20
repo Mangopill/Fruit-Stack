@@ -2,6 +2,7 @@ package com.fruitstack.fruitstack.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -15,6 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.ForgeHooks;
 
+import java.util.Properties;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -71,7 +73,7 @@ public class VineCrop extends BaseCropBlock {
   }
 
 
-  public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, Random rand) {
+  public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource rand) {
     if (!worldIn.isAreaLoaded(pos, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
     float f = getGrowthSpeed(this, worldIn, pos);
     int age = this.getAge(state);
@@ -107,12 +109,12 @@ public class VineCrop extends BaseCropBlock {
   }
 
 
-  public boolean isBonemealSuccess(Level worldIn, Random rand, BlockPos pos, BlockState state) {
+  public boolean isBonemealSuccess(Level worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     return true;
   }
 
 
-  public void performBonemeal(ServerLevel worldIn, Random rand, BlockPos pos, BlockState state) {
+  public void performBonemeal(ServerLevel worldIn, RandomSource rand, BlockPos pos, BlockState state) {
     int ageGrowth = Math.min(this.getAge(state) + this.getBonemealAgeIncrease(worldIn), 15);
     if (ageGrowth <= this.getMaxAge()) {
       worldIn.setBlockAndUpdate(pos, state.setValue(AGE, ageGrowth));

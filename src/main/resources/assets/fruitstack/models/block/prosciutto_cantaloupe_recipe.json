@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/prosciutto_cantaloupe_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/prosciutto_cantaloupe_recipe"
+      "0": "fruitstack:block/prosciutto_cantaloupe_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/prosciutto_cantaloupe_recipe"
     }
   }
   

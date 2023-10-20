@@ -23,7 +23,6 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.lwjgl.system.CallbackI;
 
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
@@ -39,10 +38,10 @@ public class ModBlocks {
 	{
 		return entityType == EntityType.OCELOT || entityType == EntityType.PARROT;
 	}
-	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, CreativeModeTab tab)
+	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier)
 	{
 		RegistryObject<T> block = BLOCKS.register(name, supplier);
-		ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+		ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
 		return block;
 	}
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, fruitstack.MODID);
@@ -136,15 +135,15 @@ public class ModBlocks {
 	() -> new MangoSapling(Block.Properties.of(Material.PLANT)
 				.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> MANGO_LOG_BIG = register("mango_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MANGO_LOG_MEDIUM = register("mango_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MANGO_LOG_SMALL = register("mango_log_small",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MANGO_LOG_TOP = register("mango_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MANGO_LEAVES = register("mango_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> MANGO_CROP = BLOCKS.register("mango_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 						.noCollission().randomTicks().sound(SoundType.CROP), "mango_block"));
@@ -192,15 +191,15 @@ public class ModBlocks {
 			() -> new LitchiSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> LITCHI_LOG_BIG = register("litchi_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> LITCHI_LOG_MEDIUM = register("litchi_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> LITCHI_LOG_BIFURCATE = register("litchi_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> LITCHI_LOG_TOP = register("litchi_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> LITCHI_LEAVES = register("litchi_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> LITCHI_CROP = BLOCKS.register("litchi_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "litchi_block"));
@@ -232,31 +231,31 @@ public class ModBlocks {
 			() -> new AppleSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> APPLE_LOG_BIG = register("apple_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APPLE_LOG_MEDIUM = register("apple_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APPLE_LOG_BIFURCATE = register("apple_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APPLE_LOG_TOP = register("apple_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APPLE_LEAVES = register("apple_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
-    //black tea
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
+	//black tea
 	public static final RegistryObject<Block> BLACK_TEA_LOG_BIG = BLOCKS.register("black_tea_log_big",
 			() -> new BlackTeaCropBlock(ModBlocks.BLACK_TEA_LOG_MEDIUM, ModBlocks.BLACK_TEA_LOG_TOP, ModBlocks.BLACK_TEA_LEAVES,Block.Properties.of(Material.WOOD)));
 	public static final RegistryObject<Block> BLACK_TEA_LOG_MEDIUM = register("black_tea_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BLACK_TEA_LOG_TOP = register("black_tea_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BLACK_TEA_LEAVES = register("black_tea_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<Block> WILD_BLACK_TEA_LEAVES = BLOCKS.register("wild_black_tea_leaves",
 			() -> new WildCropBlock(MobEffects.DAMAGE_BOOST, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
 	public static final RegistryObject<Block> BLACK_TEA_LEAVES_BAG = BLOCKS.register("black_tea_leaves_bag",
-			() -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+			() -> new Block(Block.Properties.copy(Blocks.OAK_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 	//sugar_cane
 	public static final RegistryObject<Block> SUGAR_CANE_BUNDLE = BLOCKS.register("sugar_cane_bundle",
-			() -> new Block(Block.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+			() -> new Block(Block.Properties.copy(Blocks.OAK_WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 	//huoshen fruit
 	public static final RegistryObject<Block> HUOSHEN_FRUIT = BLOCKS.register("huoshen_fruit",
 			() -> new CanMineFruitBlock(Block.Properties.copy(Blocks.PUMPKIN), ModItems.HUOSHEN_FRUIT_SLICE, false));
@@ -344,15 +343,15 @@ public class ModBlocks {
 			() -> new PearSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> PEAR_LOG_BIG = register("pear_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEAR_LOG_MEDIUM = register("pear_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEAR_LOG_BIFURCATE = register("pear_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEAR_LOG_TOP = register("pear_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEAR_LEAVES = register("pear_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> PEAR_CROP = BLOCKS.register("pear_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "pear_block"));
@@ -375,13 +374,13 @@ public class ModBlocks {
 			() -> new MaythornSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> MAYTHORN_LOG_BIG = register("maythorn_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MAYTHORN_LOG_MEDIUM = register("maythorn_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MAYTHORN_LOG_BIFURCATE = register("maythorn_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> MAYTHORN_LEAVES = register("maythorn_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> MAYTHORN_CROP = BLOCKS.register("maythorn_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "maythorn"));
@@ -415,7 +414,7 @@ public class ModBlocks {
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "chinese_pear_leaved_block"));
 	public static final RegistryObject<Block> CHINESE_PEAR_LEAVED_LEAVES = register("chinese_pear_leaved_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<Block> CHINESE_PEAR_LEAVED_CAKE = BLOCKS.register("chinese_pear_leaved_cake",
 			() -> new ModCakeBlock(Block.Properties.copy(Blocks.CAKE), ModItems.CHINESE_PEAR_LEAVED_CAKE_SLICE));
 	public static final RegistryObject<Block> CHINESE_PEAR_LEAVED_PIE = BLOCKS.register("chinese_pear_leaved_pie",
@@ -433,11 +432,11 @@ public class ModBlocks {
 			() -> new PlumSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> PLUM_LOG_BIG = register("plum_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PLUM_LOG_TOP = register("plum_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PLUM_LEAVES = register("plum_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> PLUM_CROP = BLOCKS.register("plum_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "plum"));
@@ -462,11 +461,11 @@ public class ModBlocks {
 			() -> new JujubeSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> JUJUBE_LOG_BIG = register("jujube_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> JUJUBE_LOG_TOP = register("jujube_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> JUJUBE_LEAVES = register("jujube_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> JUJUBE_CROP = BLOCKS.register("jujube_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "jujube"));
@@ -491,15 +490,15 @@ public class ModBlocks {
 			() -> new ApricotSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> APRICOT_LOG_BIG = register("apricot_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APRICOT_LOG_MEDIUM = register("apricot_log_medium",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APRICOT_LOG_BIFURCATE = register("apricot_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APRICOT_LOG_TOP = register("apricot_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> APRICOT_LEAVES = register("apricot_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> APRICOT_CROP = BLOCKS.register("apricot_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "apricot"));
@@ -522,11 +521,11 @@ public class ModBlocks {
 			() -> new BayberrySapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> BAYBERRY_LOG_BIG = register("bayberry_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BAYBERRY_LOG_BIFURCATE = register("bayberry_log_bifurcate",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> BAYBERRY_LEAVES = register("bayberry_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> RED_BAYBERRY_CROP = BLOCKS.register("red_bayberry_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "red_bayberry"));
@@ -546,8 +545,8 @@ public class ModBlocks {
 			() -> new FruitPopsicleMachineBlock(BlockBehaviour.Properties.of(Material.METAL).strength(0.5F, 6.0F), ModItems.RED_BAYBERRY_POPSICLE));
 	//green_plum
 	public static final RegistryObject<Block> GREEN_PLUM_SAPLING = BLOCKS.register("green_plum_sapling",
-			() -> new BayberrySapling(Block.Properties.of(Material.PLANT)
-					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 2));
+			() -> new GreenPlumSapling(Block.Properties.of(Material.PLANT)
+					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<BlockFruitCrop> GREEN_PLUM_CROP = BLOCKS.register("green_plum_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "green_plum"));
@@ -601,11 +600,11 @@ public class ModBlocks {
 			() -> new PeachSapling(Block.Properties.of(Material.PLANT)
 					.noCollission().randomTicks().strength(0f).sound(SoundType.CROP), 1));
 	public static final RegistryObject<Block> PEACH_LOG_BIG = register("peach_log_big",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEACH_LOG_TOP = register("peach_log_top",
-			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), fruitstack.CREATIVE_TAB);
+			() -> new LogBlock(BlockBehaviour.Properties.of(Material.WOOD, state -> state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.WOOD : MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> PEACH_LEAVES = register("peach_leaves",
-			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)), fruitstack.CREATIVE_TAB);
+			() -> new ModLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false)));
 	public static final RegistryObject<BlockFruitCrop> PEACH_CROP = BLOCKS.register("peach_crop",
 			() -> new BlockFruitCrop(Block.Properties.of(Material.PLANT).strength(5F)
 					.noCollission().randomTicks().sound(SoundType.CROP), "peach"));
@@ -623,8 +622,8 @@ public class ModBlocks {
 			() -> new FruitWineBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 3.0F), ModItems.PEACH_WINE_ONE, ModItems.PEACH_WINE_TWO, ModItems.PEACH_WINE_THREE, ModItems.PEACH_WINE_FOUR, ModItems.PEACH_WINE_FIVE, ModItems.PEACH_WINE_SIX, ModItems.PEACH_WINE_SEVEN, ModItems.PEACH_WINE_EIGHT, ModItems.PEACH_WINE_NINE, ModItems.PEACH_WINE_TEN, ModItems.BEST_PEACH_WINE));
 	public static final RegistryObject<Block> PEACH_POPSICLE_MACHINE = BLOCKS.register("peach_popsicle_machine",
 			() -> new FruitPopsicleMachineBlock(BlockBehaviour.Properties.of(Material.METAL).strength(0.5F, 6.0F), ModItems.PEACH_POPSICLE));
-	public static final RegistryObject<Block> LACTOBACILLUS_HONEY_PEACH_ICE = BLOCKS.register("lactobacillus_honey_peach_ice",
-			() -> new RedFruitMaythornCake(Block.Properties.copy(Blocks.CAKE), ModItems.PEACH_POPSICLE,true));
+    public static final RegistryObject<Block> LACTOBACILLUS_HONEY_PEACH_ICE = BLOCKS.register("lactobacillus_honey_peach_ice",
+            () -> new RedFruitMaythornCake(Block.Properties.copy(Blocks.CAKE), ModItems.PEACH_POPSICLE,true));
 	//zong zi
 	public static final RegistryObject<Block> WILD_GLUTINOUS_RICE = BLOCKS.register("wild_glutinous_rice",
 			() -> new WildCropBlock(MobEffects.DAMAGE_BOOST, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
@@ -751,10 +750,10 @@ public class ModBlocks {
 	public static final RegistryObject<Block> CLAY_OVEN = BLOCKS.register("clay_oven", () -> new ClayOvenBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(13))));
 	public static final RegistryObject<Block> TRIPOD_VESSEL_FOR_MAKING_PILLS_OF_IMMORTALITY = BLOCKS.register("tripod_vessel_for_making_pills_of_immortality", TvfmpoiBlock::new);
 	public static final RegistryObject<Block> JUICER = BLOCKS.register("juicer", JuicerBlock::new);
-	public static final RegistryObject<Block> WINE_BARREL = BLOCKS.register("wine_barrel",
-			() -> new WineBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 3.0F)));
 	public static final RegistryObject<Block> PLATE = BLOCKS.register("plate", () -> new PlateBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)));
 	public static final RegistryObject<Block> BOWL_BLOCK = BLOCKS.register("bowl_block", () -> new BowlBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+	public static final RegistryObject<Block> WINE_BARREL = BLOCKS.register("wine_barrel",
+			() -> new WineBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 3.0F)));
 	public static final RegistryObject<Block> LOW_WOODEN_BARREL = BLOCKS.register("low_wooden_barrel",
 			() -> new LowWoodenBarrelBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.5F, 3.0F)));
 	public static final RegistryObject<Block> POPSICLE_MACHINE = BLOCKS.register("popsicle_machine",

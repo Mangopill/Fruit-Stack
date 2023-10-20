@@ -1,8 +1,8 @@
 {
     "parent": "fruitstack:custom/recipe_package",
     "textures": {
-      "0": "fruitstack:recipe/apricot_recipe_package",
-      "particle": "fruitstack:recipe/apricot_recipe_package"
+      "0": "fruitstack:block/apricot_recipe_package",
+      "particle": "fruitstack:block/apricot_recipe_package"
     }
   }
   

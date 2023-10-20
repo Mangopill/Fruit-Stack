@@ -4,6 +4,7 @@
 		"0": "fruitstack:block/grape_jelly_block",
 		"particle": "fruitstack:block/grape_jelly_block"
 	},
+	"render_type": "translucent",
 	"elements": [
 		{
 			"from": [4, 0, 12],

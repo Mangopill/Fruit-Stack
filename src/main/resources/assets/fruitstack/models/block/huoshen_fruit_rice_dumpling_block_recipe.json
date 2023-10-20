@@ -1,9 +1,9 @@
 {
     "parent": "fruitstack:custom/recipe",
     "textures": {
-      "0": "fruitstack:recipe/huoshen_fruit_rice_dumpling_block_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/huoshen_fruit_rice_dumpling_block_recipe"
+      "0": "fruitstack:block/huoshen_fruit_rice_dumpling_block_recipe",
+      "1": "fruitstack:block/recipe_back",
+      "particle": "fruitstack:block/huoshen_fruit_rice_dumpling_block_recipe"
     }
   }
   

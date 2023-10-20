@@ -5,6 +5,7 @@
 		"1": "fruitstack:block/grape_bracket_top",
 		"particle": "fruitstack:block/grape_bracket"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [2, 14, 0],

@@ -9,6 +9,7 @@
 		"5": "fruitstack:block/chinese_spirits_fiuld",
 		"particle": "fruitstack:block/glass"
 	},
+	"render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [2, 2, 1],

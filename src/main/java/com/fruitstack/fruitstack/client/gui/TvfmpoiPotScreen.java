@@ -156,11 +156,11 @@ public class TvfmpoiPotScreen extends AbstractContainerScreen<TvfmpoitBlockMenu>
 		this.recipeBookComponent.recipesUpdated();
 	}
 
-	@Override
-	public void removed() {
-		this.recipeBookComponent.removed();
-		super.removed();
-	}
+//	@Override
+//	public void removed() {
+//		this.recipeBookComponent.removed();
+//		super.removed();
+//	}
 
 	@Override
 	@Nonnull

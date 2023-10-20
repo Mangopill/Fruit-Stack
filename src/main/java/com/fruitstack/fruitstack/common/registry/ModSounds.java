@@ -21,7 +21,6 @@ public class ModSounds
 
 	public static final RegistryObject<SoundEvent> BEATING_MELONS = SOUNDS.register("block.beating_melons.hit",
 			() -> new SoundEvent(new ResourceLocation(fruitstack.MODID, "block.beating_melons.hit")));
-
 	public static final RegistryObject<SoundEvent> JUICER = SOUNDS.register("block.juicer.stir",
 			() -> new SoundEvent(new ResourceLocation(fruitstack.MODID, "block.juicer.stir")));
 

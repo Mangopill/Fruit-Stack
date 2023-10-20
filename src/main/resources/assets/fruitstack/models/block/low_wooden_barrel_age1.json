@@ -6,6 +6,7 @@
 		"2": "fruitstack:block/low_wooden_barrel_bottom",
 		"particle": "fruitstack:block/low_wooden_barrel"
 	},
+    "render_type": "cutout_mipped",
 	"elements": [
 		{
 			"from": [3, 0, 3],
