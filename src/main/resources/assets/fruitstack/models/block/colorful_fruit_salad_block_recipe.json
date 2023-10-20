@@ -1,9 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe",
-    "textures": {
-      "0": "fruitstack:recipe/colorful_fruit_salad_block_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/colorful_fruit_salad_block_recipe"
-    }
-  }
-  

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "fruitstack:raw_green_plum_moon_cake"
-  },
-  "result": "fruitstack:green_plum_moon_cake",
-  "experience": 0.35,
-  "cookingtime": 200
-}

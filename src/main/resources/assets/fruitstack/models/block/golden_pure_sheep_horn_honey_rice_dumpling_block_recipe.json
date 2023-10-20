@@ -1,9 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe",
-    "textures": {
-      "0": "fruitstack:recipe/golden_pure_sheep_horn_honey_rice_dumpling_block_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/golden_pure_sheep_horn_honey_rice_dumpling_block_recipe"
-    }
-  }
-  

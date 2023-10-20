@@ -1,8 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe_package",
-    "textures": {
-      "0": "fruitstack:recipe/beating_melons_recipe_package",
-      "particle": "fruitstack:recipe/beating_melons_recipe_package"
-    }
-  }
-  

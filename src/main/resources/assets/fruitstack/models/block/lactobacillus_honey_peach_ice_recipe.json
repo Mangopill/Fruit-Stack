@@ -1,8 +1,0 @@
-{
-  "parent": "fruitstack:custom/recipe",
-  "textures": {
-    "0": "fruitstack:recipe/lactobacillus_honey_peach_ice_recipe",
-    "1": "fruitstack:recipe/recipe_back",
-    "particle": "fruitstack:recipe/lactobacillus_honey_peach_ice_recipe"
-  }
-}

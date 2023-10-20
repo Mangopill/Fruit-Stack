@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "fruitstack:item/golden_fruit_knife"
-  }
-}

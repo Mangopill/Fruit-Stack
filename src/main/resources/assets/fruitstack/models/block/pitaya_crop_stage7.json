@@ -1,7 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-      "crop": "fruitstack:block/pitaya_crop_stage7"
-    }
-  }
-  

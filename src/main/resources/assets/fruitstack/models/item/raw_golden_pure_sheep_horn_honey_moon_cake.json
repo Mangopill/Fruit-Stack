@@ -1,6 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "fruitstack:item/raw_golden_pure_sheep_horn_honey_moon_cake"
-	}
-}

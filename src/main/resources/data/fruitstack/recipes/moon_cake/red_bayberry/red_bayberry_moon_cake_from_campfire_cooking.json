@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "fruitstack:raw_red_bayberry_moon_cake"
-  },
-  "result": "fruitstack:red_bayberry_moon_cake",
-  "experience": 0.35,
-  "cookingtime": 600
-}

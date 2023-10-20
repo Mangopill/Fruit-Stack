@@ -1,9 +1,0 @@
-{
-	"parent": "minecraft:block/orientable_with_bottom",
-	"textures": {
-	  "side": "fruitstack:block/dirt_bricks",
-	  "front": "fruitstack:block/dirt_bricks_fire",
-	  "bottom": "fruitstack:block/dirt_bricks",
-	  "top": "fruitstack:block/polished_granite"
-	}
-  }

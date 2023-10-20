@@ -1,9 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe",
-    "textures": {
-      "0": "fruitstack:recipe/raw_hamimelon_moon_cake_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/raw_hamimelon_moon_cake_recipe"
-    }
-  }
-  

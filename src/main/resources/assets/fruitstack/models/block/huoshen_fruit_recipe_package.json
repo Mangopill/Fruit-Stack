@@ -1,8 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe_package",
-    "textures": {
-      "0": "fruitstack:recipe/huoshen_fruit_recipe_package",
-      "particle": "fruitstack:recipe/huoshen_fruit_recipe_package"
-    }
-  }
-  

@@ -1,9 +1,0 @@
-{
-    "parent": "fruitstack:custom/recipe",
-    "textures": {
-      "0": "fruitstack:recipe/green_plum_sapling_recipe",
-      "1": "fruitstack:recipe/recipe_back",
-      "particle": "fruitstack:recipe/green_plum_sapling_recipe"
-    }
-  }
-  

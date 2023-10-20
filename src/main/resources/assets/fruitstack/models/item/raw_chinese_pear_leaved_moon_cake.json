@@ -1,6 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "fruitstack:item/raw_chinese_pear_leaved_moon_cake"
-	}
-}

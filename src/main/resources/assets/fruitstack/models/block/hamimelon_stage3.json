@@ -1,7 +1,0 @@
-{
-    "parent": "block/cross",
-    "textures": {
-      "cross": "fruitstack:block/hamimelon_stage3"
-    }
-  }
-  

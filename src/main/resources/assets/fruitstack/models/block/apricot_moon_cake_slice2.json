@@ -1,7 +1,0 @@
-{
-  "parent": "fruitstack:custom/moon_cake_2",
-	"textures": {
-		"0": "fruitstack:item/apricot_moon_cake",
-		"particle": "fruitstack:item/apricot_moon_cake"
-	}
-}

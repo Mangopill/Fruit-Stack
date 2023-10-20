@@ -1,7 +1,0 @@
-{
-  "parent": "fruitstack:custom/recipe_package",
-  "textures": {
-    "0": "fruitstack:recipe/peach_recipe_package",
-    "particle": "fruitstack:recipe/peach_recipe_package"
-  }
-}

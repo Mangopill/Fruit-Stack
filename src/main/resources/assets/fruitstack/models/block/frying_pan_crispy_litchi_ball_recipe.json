@@ -1,8 +1,0 @@
-{
-	"parent": "fruitstack:custom/frying_pan_recipe",
-	"textures": {
-		"0": "fruitstack:recipe/frying_pan_crispy_litchi_ball_recipe",
-		"1": "fruitstack:recipe/recipe_back",
-		"particle": "fruitstack:recipe/recipe_back"
-	}
-}
