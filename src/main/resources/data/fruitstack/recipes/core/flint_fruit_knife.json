@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " b",
+    "#b"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "b": {
+      "item": "minecraft:flint"
+    }
+  },
+  "result": {
+    "item": "fruitstack:flint_fruit_knife"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "sweetened_blueberries_recipe0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:sweetened_blueberries_recipe"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

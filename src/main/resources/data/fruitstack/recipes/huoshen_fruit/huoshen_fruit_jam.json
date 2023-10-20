@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#",
+    "#b"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:huoshen_fruit_slice"
+    },
+    "a": {
+      "item": "minecraft:sugar"
+    },
+    "b": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "fruitstack:huoshen_fruit_jam"
+  }
+}

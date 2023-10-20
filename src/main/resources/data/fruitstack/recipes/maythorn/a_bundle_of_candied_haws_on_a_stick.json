@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#b#",
+    "#a#",
+    " c "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:bowled_candied_haws_on_a_stick"
+    },
+    "a": {
+      "tag": "minecraft:wool"
+    },
+    "b": {
+      "item": "minecraft:string"
+    },
+    "c": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "fruitstack:a_bundle_of_candied_haws_on_a_stick"
+  }
+}

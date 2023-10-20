@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    "a#a",
+    " a "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:september_melon"
+    },
+    "a": {
+      "tag": "forge:fences/wooden"
+    }
+  },
+  "result": {
+    "item": "fruitstack:september_melon_seeds"
+  }
+}

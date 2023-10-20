@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "grape_cake_slice_recipe0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:grape_cake_slice_recipe"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

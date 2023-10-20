@@ -1,0 +1,10 @@
+{
+  "parent": "fruitstack:block/pie_slice3",
+  "textures": {
+    "particle": "fruitstack:block/peach_pie_top",
+    "bottom": "fruitstack:block/peach_pie_bottom",
+    "inner": "fruitstack:block/peach_pie_inner",
+    "side": "fruitstack:block/peach_pie_side",
+    "top": "fruitstack:block/peach_pie_top"
+  }
+}

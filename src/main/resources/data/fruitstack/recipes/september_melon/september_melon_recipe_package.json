@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aaa",
+    "a#a",
+    "aaa"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:september_melon"
+    },
+    "a": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "fruitstack:september_melon_recipe_package"
+  }
+}

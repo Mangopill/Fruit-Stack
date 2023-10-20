@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:litchi_slice"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:unformed_litchi_river_dough"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

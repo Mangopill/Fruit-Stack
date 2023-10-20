@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:golden_pure_sheep_horn_honey_filling"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:raw_golden_pure_sheep_horn_honey_moon_cake"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:plum_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:plum",
+    "count": 9
+  }
+}

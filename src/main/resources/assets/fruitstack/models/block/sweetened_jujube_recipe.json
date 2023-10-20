@@ -1,0 +1,9 @@
+{
+    "parent": "fruitstack:custom/recipe",
+    "textures": {
+      "0": "fruitstack:recipe/sweetened_jujube_recipe",
+      "1": "fruitstack:recipe/recipe_back",
+      "particle": "fruitstack:recipe/sweetened_jujube_recipe"
+    }
+  }
+  

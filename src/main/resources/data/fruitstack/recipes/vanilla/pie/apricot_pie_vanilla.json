@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "aaa",
+    "xbx"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "a": {
+      "item": "fruitstack:apricot"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "fruitstack:apricot_pie"
+  }
+}

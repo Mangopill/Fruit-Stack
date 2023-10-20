@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fruitstack:block/huoshen_fruit_pie_recipe"
+    },
+    "facing=east": {
+      "model": "fruitstack:block/huoshen_fruit_pie_recipe",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fruitstack:block/huoshen_fruit_pie_recipe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fruitstack:block/huoshen_fruit_pie_recipe",
+      "y": 270
+    }
+  }
+}

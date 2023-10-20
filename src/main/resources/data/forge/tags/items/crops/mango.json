@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "fruitstack:mango_block",
+    "fruitstack:mango_slice",
+    "fruitstack:green_mango_block",
+    "fruitstack:green_mango_slice"
+  ]
+}

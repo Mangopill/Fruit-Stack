@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "litchi_slice_recipe0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:litchi_slice_recipe"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

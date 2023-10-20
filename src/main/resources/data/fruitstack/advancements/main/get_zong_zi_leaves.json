@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:zong_zi_leaves"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_zong_zi_leaves"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_zong_zi_leaves.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_zong_zi_leaves": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:zong_zi_leaves"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_zong_zi_leaves"
+      ]
+    ]
+  }

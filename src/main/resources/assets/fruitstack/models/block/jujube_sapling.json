@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "fruitstack:item/jujube_sapling"
+    }
+  }
+  

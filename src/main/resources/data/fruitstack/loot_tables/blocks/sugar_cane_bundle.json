@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "sugar_cane_bundle0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:sugar_cane_bundle"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

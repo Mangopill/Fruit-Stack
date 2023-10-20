@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "fruitstack:block/grape_fruit_sand_pizza"
+    },
+    "bites=1": {
+      "model": "fruitstack:block/grape_fruit_sand_pizza_slice1"
+    },
+    "bites=2": {
+      "model": "fruitstack:block/grape_fruit_sand_pizza_slice2"
+    },
+    "bites=3": {
+      "model": "fruitstack:block/grape_fruit_sand_pizza_slice3"
+    }
+  }
+}

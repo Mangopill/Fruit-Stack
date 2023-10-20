@@ -1,0 +1,9 @@
+{
+    "parent": "fruitstack:custom/recipe",
+    "textures": {
+      "0": "fruitstack:recipe/plum_filling_recipe",
+      "1": "fruitstack:recipe/recipe_back",
+      "particle": "fruitstack:recipe/plum_filling_recipe"
+    }
+  }
+  

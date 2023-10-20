@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#a#",
+    "#a#",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:rods/wooden"
+    },
+    "a": {
+      "tag": "forge:fences"
+    }
+  },
+  "result": {
+    "item": "fruitstack:grape_bracket"
+  }
+}

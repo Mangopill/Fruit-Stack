@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    "a#a",
+    " a "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:huoshen_fruit"
+    },
+    "a": {
+      "tag": "forge:fences/wooden"
+    }
+  },
+  "result": {
+    "item": "fruitstack:huoshen_fruit_seeds"
+  }
+}

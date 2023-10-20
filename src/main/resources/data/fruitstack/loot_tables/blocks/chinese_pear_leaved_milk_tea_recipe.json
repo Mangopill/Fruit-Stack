@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "chinese_pear_leaved_milk_tea_recipe0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:chinese_pear_leaved_milk_tea_recipe"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

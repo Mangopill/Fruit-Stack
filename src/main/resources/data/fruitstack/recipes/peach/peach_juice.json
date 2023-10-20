@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:peach_slice"
+    },
+    {
+      "item": "fruitstack:peach_slice"
+    },
+    {
+      "item": "fruitstack:peach_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:peach_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

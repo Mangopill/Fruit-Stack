@@ -1,0 +1,25 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:blueberries"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "fruitstack:pitaya_slice"
+    },
+    {
+      "item": "fruitstack:pitaya"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:pitaya_rice_and_vegetable_roll"
+  },
+  "experience": 0.35,
+  "cookingtime": 100
+}

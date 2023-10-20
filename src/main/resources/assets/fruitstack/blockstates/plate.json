@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fruitstack:block/plate"
+    },
+    "facing=south": {
+      "model": "fruitstack:block/plate",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fruitstack:block/plate",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "fruitstack:block/plate",
+      "y": 90
+    }
+  }
+}

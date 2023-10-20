@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "# #",
+    "aaa"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "a": {
+      "item": "minecraft:spruce_slab"
+    }
+  },
+  "result": {
+    "item": "fruitstack:low_wooden_barrel"
+  }
+}

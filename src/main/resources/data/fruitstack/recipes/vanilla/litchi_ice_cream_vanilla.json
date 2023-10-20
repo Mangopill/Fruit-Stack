@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cOb",
+    "ax ",
+    "   "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:ice"
+    },
+    "c": {
+      "item": "minecraft:bowl"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    },
+    "O": {
+      "item": "fruitstack:litchi_slice"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "fruitstack:litchi_ice_cream"
+  }
+}

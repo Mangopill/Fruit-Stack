@@ -1,0 +1,45 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "fruitstack:item/blueberries",
+		"particle": "fruitstack:item/blueberries"
+	},
+	"elements": [
+		{
+			"from": [8, 0, 3],
+			"to": [12, 4, 7],
+			"faces": {
+				"north": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"east": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"south": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"west": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"up": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"down": {"uv": [8, 11, 12, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7, 0, 9],
+			"to": [11, 4, 13],
+			"faces": {
+				"north": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"east": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"south": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"west": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"up": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"down": {"uv": [8, 11, 12, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 0, 5],
+			"to": [6, 4, 9],
+			"faces": {
+				"north": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"east": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"south": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"west": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"up": {"uv": [8, 11, 12, 15], "texture": "#0"},
+				"down": {"uv": [8, 11, 12, 15], "texture": "#0"}
+			}
+		}
+	]
+}

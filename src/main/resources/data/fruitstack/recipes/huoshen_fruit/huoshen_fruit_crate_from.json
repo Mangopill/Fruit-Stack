@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:huoshen_fruit_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:huoshen_fruit",
+    "count": 9
+  }
+}

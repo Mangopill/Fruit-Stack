@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "black_tea_leaves_item0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:black_tea_leaves_item"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

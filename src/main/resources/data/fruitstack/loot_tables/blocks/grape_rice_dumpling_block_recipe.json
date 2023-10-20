@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "grape_rice_dumpling_block_recipe0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:grape_rice_dumpling_block_recipe"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "fruitstack:block/stir_fried_beating_melons_seeds_age0"
+    },
+    "age=1": {
+      "model": "fruitstack:block/stir_fried_beating_melons_seeds_age1"
+    },
+    "age=2": {
+      "model": "fruitstack:block/stir_fried_beating_melons_seeds_age2"
+    }
+  }
+}

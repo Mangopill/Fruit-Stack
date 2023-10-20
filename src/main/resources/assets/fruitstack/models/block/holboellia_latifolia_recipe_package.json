@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/holboellia_latifolia_recipe_package",
+      "particle": "fruitstack:recipe/holboellia_latifolia_recipe_package"
+    }
+  }
+  

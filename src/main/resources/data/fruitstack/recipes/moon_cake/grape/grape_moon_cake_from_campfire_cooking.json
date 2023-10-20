@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "fruitstack:raw_grape_moon_cake"
+  },
+  "result": "fruitstack:grape_moon_cake",
+  "experience": 0.35,
+  "cookingtime": 600
+}

@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:beating_melons_slice"
+    },
+    {
+      "item": "fruitstack:beating_melons_slice"
+    },
+    {
+      "item": "fruitstack:beating_melons_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:beating_melons_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

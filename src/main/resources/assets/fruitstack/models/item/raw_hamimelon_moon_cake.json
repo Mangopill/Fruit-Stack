@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "fruitstack:item/raw_hamimelon_moon_cake"
+	}
+}

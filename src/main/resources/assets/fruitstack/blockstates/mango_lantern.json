@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,hanging=false": {
+      "model": "fruitstack:block/mango_lantern"
+    },
+    "facing=south,hanging=false": {
+      "model": "fruitstack:block/mango_lantern",
+      "y": 180
+    },
+    "facing=west,hanging=false": {
+      "model": "fruitstack:block/mango_lantern",
+      "y": 270
+    },
+    "facing=east,hanging=false": {
+      "model": "fruitstack:block/mango_lantern",
+      "y": 90
+    },
+    "facing=north,hanging=true": {
+      "model": "fruitstack:block/mango_lantern_hanging"
+    },
+    "facing=south,hanging=true": {
+      "model": "fruitstack:block/mango_lantern_hanging",
+      "y": 180
+    },
+    "facing=west,hanging=true": {
+      "model": "fruitstack:block/mango_lantern_hanging",
+      "y": 270
+    },
+    "facing=east,hanging=true": {
+      "model": "fruitstack:block/mango_lantern_hanging",
+      "y": 90
+    }
+  }
+}

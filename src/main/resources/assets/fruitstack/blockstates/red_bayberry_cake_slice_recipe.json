@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fruitstack:block/red_bayberry_cake_slice_recipe"
+    },
+    "facing=east": {
+      "model": "fruitstack:block/red_bayberry_cake_slice_recipe",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fruitstack:block/red_bayberry_cake_slice_recipe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fruitstack:block/red_bayberry_cake_slice_recipe",
+      "y": 270
+    }
+  }
+}

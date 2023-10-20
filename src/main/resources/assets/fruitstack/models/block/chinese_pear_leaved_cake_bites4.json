@@ -1,0 +1,23 @@
+{
+  "parent": "block/cake",
+  "textures": {
+    "particle": "fruitstack:block/chinese_pear_leaved_cake_side",
+    "bottom": "fruitstack:block/chinese_pear_leaved_cake_bottom",
+    "top": "fruitstack:block/chinese_pear_leaved_cake_top",
+    "side": "fruitstack:block/chinese_pear_leaved_cake_side",
+    "inside": "fruitstack:block/chinese_pear_leaved_cake_inner"
+},
+"elements": [
+    {   "from": [ 9, 0, 1 ],
+        "to": [ 15, 8, 15 ],
+        "faces": {
+            "down":  { "texture": "#bottom", "cullface": "down" },
+            "up":    { "texture": "#top" },
+            "north": { "texture": "#side" },
+            "south": { "texture": "#side" },
+            "west":  { "texture": "#inside" },
+            "east":  { "texture": "#side" }
+        }
+    }
+]
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "fruitstack:block/unformed_litchi_river_dough"
+    },
+    "age=1": {
+      "model": "fruitstack:block/unformed_litchi_river_dough"
+    }
+  }
+}

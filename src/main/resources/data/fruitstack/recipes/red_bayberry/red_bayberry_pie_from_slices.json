@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:red_bayberry_pie_slice"
+    }
+  },
+  "result": {
+    "item": "fruitstack:red_bayberry_pie"
+  }
+}

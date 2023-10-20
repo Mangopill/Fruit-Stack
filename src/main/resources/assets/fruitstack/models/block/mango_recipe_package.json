@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/mango_recipe_package",
+      "particle": "fruitstack:recipe/mango_recipe_package"
+    }
+  }
+  

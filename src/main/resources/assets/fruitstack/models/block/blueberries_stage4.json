@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "fruitstack:block/blueberries_stage4"
+    }
+  }
+  

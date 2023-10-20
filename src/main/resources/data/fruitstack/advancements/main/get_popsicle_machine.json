@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:popsicle_machine"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_popsicle_machine"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_popsicle_machine.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_popsicle_machine": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:popsicle_machine"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_popsicle_machine"
+      ]
+    ]
+  }

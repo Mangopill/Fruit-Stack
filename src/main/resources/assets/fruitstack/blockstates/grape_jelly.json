@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=north,bites=0": {
+      "model": "fruitstack:block/grape_jelly_bites5",
+      "y": 180
+    },
+    "facing=south,bites=0": {
+      "model": "fruitstack:block/grape_jelly_bites5"
+    },
+    "facing=west,bites=0": {
+      "model": "fruitstack:block/grape_jelly_bites5",
+      "y": 90
+    },
+    "facing=east,bites=0": {
+      "model": "fruitstack:block/grape_jelly_bites5",
+      "y": 270
+    },
+    "facing=north,bites=1": {
+      "model": "fruitstack:block/grape_jelly_bites4",
+      "y": 180
+    },
+    "facing=south,bites=1": {
+      "model": "fruitstack:block/grape_jelly_bites4"
+    },
+    "facing=west,bites=1": {
+      "model": "fruitstack:block/grape_jelly_bites4",
+      "y": 90
+    },
+    "facing=east,bites=1": {
+      "model": "fruitstack:block/grape_jelly_bites4",
+      "y": 270
+    },
+    "facing=north,bites=2": {
+      "model": "fruitstack:block/grape_jelly_bites3",
+      "y": 180
+    },
+    "facing=south,bites=2": {
+      "model": "fruitstack:block/grape_jelly_bites3"
+    },
+    "facing=west,bites=2": {
+      "model": "fruitstack:block/grape_jelly_bites3",
+      "y": 90
+    },
+    "facing=east,bites=2": {
+      "model": "fruitstack:block/grape_jelly_bites3",
+      "y": 270
+    },
+    "facing=north,bites=3": {
+      "model": "fruitstack:block/grape_jelly_bites2",
+      "y": 180
+    },
+    "facing=south,bites=3": {
+      "model": "fruitstack:block/grape_jelly_bites2"
+    },
+    "facing=west,bites=3": {
+      "model": "fruitstack:block/grape_jelly_bites2",
+      "y": 90
+    },
+    "facing=east,bites=3": {
+      "model": "fruitstack:block/grape_jelly_bites2",
+      "y": 270
+    },
+    "facing=north,bites=4": {
+      "model": "fruitstack:block/grape_jelly_bites1",
+      "y": 180
+    },
+    "facing=south,bites=4": {
+      "model": "fruitstack:block/grape_jelly_bites1"
+    },
+    "facing=west,bites=4": {
+      "model": "fruitstack:block/grape_jelly_bites1",
+      "y": 90
+    },
+    "facing=east,bites=4": {
+      "model": "fruitstack:block/grape_jelly_bites1",
+      "y": 270
+    }
+  }
+}

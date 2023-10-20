@@ -1,0 +1,37 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:apricot_filling"
+    },
+    {
+      "item": "fruitstack:apricot_filling"
+    },
+    {
+      "item": "fruitstack:apricot_filling"
+    },
+    {
+      "item": "fruitstack:apricot_filling"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:apricot_rice_dumpling_block"
+  },
+  "container": {
+    "item": "fruitstack:rice_dumpling_pot"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

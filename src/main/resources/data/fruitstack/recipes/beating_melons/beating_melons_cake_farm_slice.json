@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:beating_melons_cake_slice"
+    }
+  },
+  "result": {
+    "item": "fruitstack:beating_melons_cake"
+  }
+}

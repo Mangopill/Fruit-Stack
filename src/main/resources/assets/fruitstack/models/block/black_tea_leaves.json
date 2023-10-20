@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "fruitstack:block/black_tea_leaves"
+  }
+}

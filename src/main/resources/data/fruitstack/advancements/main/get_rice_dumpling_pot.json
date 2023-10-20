@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:rice_dumpling_pot"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_rice_dumpling_pot"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_rice_dumpling_pot.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_rice_dumpling_pot": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:rice_dumpling_pot"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_rice_dumpling_pot"
+      ]
+    ]
+  }

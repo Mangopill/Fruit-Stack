@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:litchi_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:litchi_block",
+    "count": 9
+  }
+}

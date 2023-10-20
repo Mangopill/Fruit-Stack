@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "tripod_vessel_for_making_pills_of_immortality0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:tripod_vessel_for_making_pills_of_immortality"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

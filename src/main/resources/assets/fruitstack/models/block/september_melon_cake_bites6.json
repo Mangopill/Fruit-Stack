@@ -1,0 +1,23 @@
+{
+  "parent": "block/cake",
+  "textures": {
+    "particle": "fruitstack:block/september_melon_cake_side",
+    "bottom": "fruitstack:block/september_melon_cake_bottom",
+    "top": "fruitstack:block/september_melon_cake_top",
+    "side": "fruitstack:block/september_melon_cake_side",
+    "inside": "fruitstack:block/september_melon_cake_inner"
+},
+"elements": [
+    {   "from": [ 13, 0, 1 ],
+        "to": [ 15, 8, 15 ],
+        "faces": {
+            "down":  { "texture": "#bottom", "cullface": "down" },
+            "up":    { "texture": "#top" },
+            "north": { "texture": "#side" },
+            "south": { "texture": "#side" },
+            "west":  { "texture": "#inside" },
+            "east":  { "texture": "#side" }
+        }
+    }
+]
+}

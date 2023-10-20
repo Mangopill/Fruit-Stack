@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:chinese_pear_leaved_pie_slice"
+    }
+  },
+  "result": {
+    "item": "fruitstack:chinese_pear_leaved_pie"
+  }
+}

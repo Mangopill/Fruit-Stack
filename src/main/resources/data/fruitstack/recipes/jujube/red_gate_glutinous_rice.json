@@ -1,0 +1,31 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "fruitstack:jujube"
+    },
+    {
+      "item": "fruitstack:jujube"
+    },
+    {
+      "item": "fruitstack:jujube"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:red_gate_glutinous_rice"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

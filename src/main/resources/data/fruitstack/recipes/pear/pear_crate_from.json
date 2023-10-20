@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:pear_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:pear_block",
+    "count": 9
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "parent": "fruitstack:custom/zong_zi1",
+    "textures": {
+      "0": "fruitstack:item/melon_zong_zi",
+      "1": "fruitstack:item/ground_cucumber_jam",
+      "2": "fruitstack:item/beating_melons_jam",
+      "3": "fruitstack:item/holboellia_latifolia_jam",
+      "particle": "fruitstack:item/melon_zong_zi"
+    }
+  }
+  

@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "fruitstack:item/litchi_rice_dumpling_block"
+	}
+}

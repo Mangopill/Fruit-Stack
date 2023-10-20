@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fruitstack:jujube"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:jujube_filling"
+  }
+}

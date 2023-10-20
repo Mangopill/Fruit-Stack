@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/zong_zi0",
+    "textures": {
+      "0": "fruitstack:item/zong_zi",
+      "particle": "fruitstack:item/zong_zi"
+    }
+  }
+  

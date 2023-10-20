@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#",
+    "# "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:litchi_block"
+    },
+    "a": {
+      "item": "minecraft:jungle_sapling"
+    }
+  },
+  "result": {
+    "item": "fruitstack:litchi_sapling"
+  }
+}

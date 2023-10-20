@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aea",
+    "###",
+    "ced"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    },
+    "a": {
+      "item": "fruitstack:blueberries"
+    },
+    "c": {
+      "tag": "forge:eggs"
+    },
+    "d": {
+      "item": "minecraft:sugar"
+    },
+    "e": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "fruitstack:holboellia_latifolia_egg_milk_pudding"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "aba",
+    "a#a"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:water_bucket"
+    },
+    "a": {
+      "item": "minecraft:dirt"
+    },
+    "b": {
+      "item": "minecraft:campfire"
+    },
+    "c": {
+      "item": "minecraft:granite"
+    }
+  },
+  "result": {
+    "item": "fruitstack:clay_oven"
+  }
+}

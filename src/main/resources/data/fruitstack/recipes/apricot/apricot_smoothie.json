@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "-z-",
+    "zzz",
+    "bib"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "item": "minecraft:sugar"
+    },
+    "-": {
+      "tag": "forge:milk"
+    },
+    "z": {
+      "item": "fruitstack:apricot"
+    }
+  },
+  "result": {
+    "item": "fruitstack:apricot_smoothie"
+  }
+}

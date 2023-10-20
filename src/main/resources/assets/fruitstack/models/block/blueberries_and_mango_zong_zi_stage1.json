@@ -1,0 +1,11 @@
+{
+    "parent": "fruitstack:custom/zong_zi1",
+    "textures": {
+      "0": "fruitstack:item/blueberries_and_mango_zong_zi",
+      "1": "fruitstack:item/blueberries_jam",
+      "2": "fruitstack:item/mango_jam",
+      "3": "fruitstack:item/september_melon_jam",
+      "particle": "fruitstack:item/blueberries_and_mango_zong_zi"
+    }
+  }
+  

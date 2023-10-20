@@ -1,0 +1,7 @@
+{
+  "variants": {
+      "": {
+          "model": "fruitstack:block/pear_sapling"
+      }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#a#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:life_essence"
+    },
+    "a": {
+      "item": "fruitstack:corrupt_soil"
+    }
+  },
+  "result": {
+    "item": "fruitstack:life_dirt"
+  }
+}

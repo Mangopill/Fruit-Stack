@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aca",
+    "aba",
+    "#a#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:smooth_quartz_stairs"
+    },
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "c": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "fruitstack:popsicle_machine"
+  }
+}

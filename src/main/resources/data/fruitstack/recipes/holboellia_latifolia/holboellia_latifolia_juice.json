@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    },
+    {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    },
+    {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:holboellia_latifolia_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

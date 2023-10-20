@@ -1,0 +1,28 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:sago_soup"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "item": "fruitstack:hamimelon"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:hamimelon_sago_soup_block"
+  },
+  "container": {
+    "item": "fruitstack:hamimelon"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

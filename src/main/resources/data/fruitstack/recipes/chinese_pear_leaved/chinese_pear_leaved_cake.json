@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bOb",
+    "xax",
+    "#O#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "a": {
+      "item": "minecraft:egg"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    },
+    "O": {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    },
+    "b": {
+      "tag": "forge:milk"
+    }
+  },
+  "result": {
+    "item": "fruitstack:chinese_pear_leaved_cake"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:onion_tomato_holboellia_latifolia"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

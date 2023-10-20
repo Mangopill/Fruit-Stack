@@ -1,0 +1,334 @@
+{
+  "variants": {
+    "facing=north,stage=none": {
+      "model": "fruitstack:block/frying_pan",
+      "y": 180
+    },
+    "facing=south,stage=none": {
+      "model": "fruitstack:block/frying_pan"
+    },
+    "facing=west,stage=none": {
+      "model": "fruitstack:block/frying_pan",
+      "y": 90
+    },
+    "facing=east,stage=none": {
+      "model": "fruitstack:block/frying_pan",
+      "y": 270
+    },
+    "facing=north,stage=sunflower_oil": {
+      "model": "fruitstack:block/frying_pan_sunflower_oil",
+      "y": 180
+    },
+    "facing=south,stage=sunflower_oil": {
+      "model": "fruitstack:block/frying_pan_sunflower_oil"
+    },
+    "facing=west,stage=sunflower_oil": {
+      "model": "fruitstack:block/frying_pan_sunflower_oil",
+      "y": 90
+    },
+    "facing=east,stage=sunflower_oil": {
+      "model": "fruitstack:block/frying_pan_sunflower_oil",
+      "y": 270
+    },
+    "facing=north,stage=fire": {
+      "model": "fruitstack:block/frying_pan_fire",
+      "y": 180
+    },
+    "facing=south,stage=fire": {
+      "model": "fruitstack:block/frying_pan_fire"
+    },
+    "facing=west,stage=fire": {
+      "model": "fruitstack:block/frying_pan_fire",
+      "y": 90
+    },
+    "facing=east,stage=fire": {
+      "model": "fruitstack:block/frying_pan_fire",
+      "y": 270
+    },
+    "facing=north,stage=pot_cover": {
+      "model": "fruitstack:block/frying_pan_pot_cover",
+      "y": 180
+    },
+    "facing=south,stage=pot_cover": {
+      "model": "fruitstack:block/frying_pan_pot_cover"
+    },
+    "facing=west,stage=pot_cover": {
+      "model": "fruitstack:block/frying_pan_pot_cover",
+      "y": 90
+    },
+    "facing=east,stage=pot_cover": {
+      "model": "fruitstack:block/frying_pan_pot_cover",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_beating_melons_seeds_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_beating_melons_seeds_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age0"
+    },
+    "facing=west,stage=frying_pan_stir_fried_beating_melons_seeds_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_beating_melons_seeds_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_beating_melons_seeds_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_beating_melons_seeds_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age1"
+    },
+    "facing=west,stage=frying_pan_stir_fried_beating_melons_seeds_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_beating_melons_seeds_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_beating_melons_seeds_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age2",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_beating_melons_seeds_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age2"
+    },
+    "facing=west,stage=frying_pan_stir_fried_beating_melons_seeds_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age2",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_beating_melons_seeds_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_beating_melons_seeds_age2",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_crispy_litchi_ball_age0": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_crispy_litchi_ball_age0": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age0"
+    },
+    "facing=west,stage=frying_pan_crispy_litchi_ball_age0": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_crispy_litchi_ball_age0": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_crispy_litchi_ball_age1": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_crispy_litchi_ball_age1": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age1"
+    },
+    "facing=west,stage=frying_pan_crispy_litchi_ball_age1": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_crispy_litchi_ball_age1": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_crispy_litchi_ball_age2": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age2",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_crispy_litchi_ball_age2": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age2"
+    },
+    "facing=west,stage=frying_pan_crispy_litchi_ball_age2": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age2",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_crispy_litchi_ball_age2": {
+      "model": "fruitstack:block/frying_pan_crispy_litchi_ball_age2",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_unfinished_honey_melon_chicken_balls_age0": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_unfinished_honey_melon_chicken_balls_age0": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age0"
+    },
+    "facing=west,stage=frying_pan_unfinished_honey_melon_chicken_balls_age0": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_unfinished_honey_melon_chicken_balls_age0": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_unfinished_honey_melon_chicken_balls_age1": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_unfinished_honey_melon_chicken_balls_age1": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age1"
+    },
+    "facing=west,stage=frying_pan_unfinished_honey_melon_chicken_balls_age1": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_unfinished_honey_melon_chicken_balls_age1": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_unfinished_honey_melon_chicken_balls_age2": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age2",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_unfinished_honey_melon_chicken_balls_age2": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age2"
+    },
+    "facing=west,stage=frying_pan_unfinished_honey_melon_chicken_balls_age2": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age2",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_unfinished_honey_melon_chicken_balls_age2": {
+      "model": "fruitstack:block/frying_pan_unfinished_honey_melon_chicken_balls_age2",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_yogurt_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_yogurt_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age0"
+    },
+    "facing=west,stage=frying_pan_stir_fried_yogurt_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_yogurt_age0": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_yogurt_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_yogurt_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age1"
+    },
+    "facing=west,stage=frying_pan_stir_fried_yogurt_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_yogurt_age1": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_stir_fried_yogurt_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age2",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_stir_fried_yogurt_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age2"
+    },
+    "facing=west,stage=frying_pan_stir_fried_yogurt_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age2",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_stir_fried_yogurt_age2": {
+      "model": "fruitstack:block/frying_pan_stir_fried_yogurt_age2",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_sugar_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_sugar_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age0"
+    },
+    "facing=west,stage=frying_pan_milky_tea_sugar_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_sugar_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_sugar_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_sugar_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age1"
+    },
+    "facing=west,stage=frying_pan_milky_tea_sugar_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_sugar_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_sugar_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_black_tea_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_black_tea_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age0"
+    },
+    "facing=west,stage=frying_pan_milky_tea_black_tea_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_black_tea_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_black_tea_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_black_tea_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age1"
+    },
+    "facing=west,stage=frying_pan_milky_tea_black_tea_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_black_tea_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_black_tea_age1",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_milk_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age0",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_milk_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age0"
+    },
+    "facing=west,stage=frying_pan_milky_tea_milk_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age0",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_milk_age0": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age0",
+      "y": 270
+    },
+    "facing=north,stage=frying_pan_milky_tea_milk_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age1",
+      "y": 180
+    },
+    "facing=south,stage=frying_pan_milky_tea_milk_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age1"
+    },
+    "facing=west,stage=frying_pan_milky_tea_milk_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age1",
+      "y": 90
+    },
+    "facing=east,stage=frying_pan_milky_tea_milk_age1": {
+      "model": "fruitstack:block/frying_pan_milky_tea_milk_age1",
+      "y": 270
+    }
+  }
+}

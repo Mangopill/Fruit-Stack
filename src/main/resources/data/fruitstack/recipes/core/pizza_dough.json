@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#a#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "a": {
+      "tag": "forge:eggs"
+    }
+  },
+  "result": {
+    "item": "fruitstack:pizza_dough"
+  }
+}

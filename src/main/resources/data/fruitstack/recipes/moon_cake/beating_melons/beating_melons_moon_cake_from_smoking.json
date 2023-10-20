@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "fruitstack:raw_beating_melons_moon_cake"
+  },
+  "result": "fruitstack:beating_melons_moon_cake",
+  "experience": 0.35,
+  "cookingtime": 100
+}

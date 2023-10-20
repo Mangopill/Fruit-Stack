@@ -1,0 +1,23 @@
+{
+  "parent": "block/cake",
+  "textures": {
+    "particle": "fruitstack:block/huoshen_fruit_cake_side",
+    "bottom": "fruitstack:block/huoshen_fruit_cake_bottom",
+    "top": "fruitstack:block/huoshen_fruit_cake_top",
+    "side": "fruitstack:block/huoshen_fruit_cake_side",
+    "inside": "fruitstack:block/huoshen_fruit_cake_inner"
+},
+"elements": [
+    {   "from": [ 7, 0, 1 ],
+        "to": [ 15, 8, 15 ],
+        "faces": {
+            "down":  { "texture": "#bottom", "cullface": "down" },
+            "up":    { "texture": "#top" },
+            "north": { "texture": "#side" },
+            "south": { "texture": "#side" },
+            "west":  { "texture": "#inside" },
+            "east":  { "texture": "#side" }
+        }
+    }
+]
+}

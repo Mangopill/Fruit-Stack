@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "tag": "forge:cooked_chicken"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:unfinished_honey_melon_chicken_balls"
+  }
+}

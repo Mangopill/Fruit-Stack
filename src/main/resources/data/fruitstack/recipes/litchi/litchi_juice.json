@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:litchi_slice"
+    },
+    {
+      "item": "fruitstack:litchi_slice"
+    },
+    {
+      "item": "fruitstack:litchi_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:litchi_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

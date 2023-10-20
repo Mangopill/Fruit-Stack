@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fruitstack:golden_pure_sheep_horn_honey_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:golden_pure_sheep_horn_honey_filling"
+  }
+}

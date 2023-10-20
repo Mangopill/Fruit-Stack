@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "aaa",
+    "xbx"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "a": {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    },
+    "x": {
+      "item": "minecraft:sugar"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "fruitstack:holboellia_latifolia_pie"
+  }
+}

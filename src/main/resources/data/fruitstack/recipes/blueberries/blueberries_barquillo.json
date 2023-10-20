@@ -1,0 +1,25 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:bread"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fruitstack:blueberries"
+    },
+    {
+      "item": "fruitstack:blueberries"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:blueberries_barquillo"
+  },
+  "experience": 0.35,
+  "cookingtime": 100
+}

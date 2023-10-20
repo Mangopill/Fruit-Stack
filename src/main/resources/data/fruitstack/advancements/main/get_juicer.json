@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:juicer"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_juicer"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_juicer.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_juicer": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:juicer"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_juicer"
+      ]
+    ]
+  }

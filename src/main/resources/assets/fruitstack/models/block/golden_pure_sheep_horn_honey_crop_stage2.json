@@ -1,0 +1,10 @@
+{
+  "parent": "fruitstack:custom/holboellia_latifolia_stage1",
+  "textures": {
+    "all": "fruitstack:block/teng_man_jia_",
+    "particle": "fruitstack:block/teng_man_jia_",
+    "0": "fruitstack:block/teng_man_jia_",
+    "1": "fruitstack:block/ba_yue_gua_teng_man_ding_bu_",
+    "2": "fruitstack:block/ba_yue_gua_teng_man_ce_mian_2"
+  }
+}

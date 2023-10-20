@@ -1,0 +1,7 @@
+{
+  "parent": "fruitstack:custom/moon_cake_1",
+	"textures": {
+		"0": "fruitstack:item/golden_pure_sheep_horn_honey_moon_cake",
+		"particle": "fruitstack:item/golden_pure_sheep_horn_honey_moon_cake"
+	}
+}
