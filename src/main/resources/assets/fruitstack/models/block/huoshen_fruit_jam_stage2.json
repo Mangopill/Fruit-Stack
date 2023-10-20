@@ -1,0 +1,7 @@
+{
+	"parent": "fruitstack:custom/jam2",
+	"textures": {
+		"0": "fruitstack:item/huoshen_fruit_jam",
+		"particle": "fruitstack:item/huoshen_fruit_jam"
+	}
+  }

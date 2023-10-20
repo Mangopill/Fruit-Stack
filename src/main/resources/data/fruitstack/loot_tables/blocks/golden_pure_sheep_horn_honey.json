@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pool1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:golden_pure_sheep_horn_honey"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "fruitstack:golden_pure_sheep_horn_honey",
+          "properties": {
+            "servings": "3"
+          }
+        }
+      ]
+    }
+  ]
+}

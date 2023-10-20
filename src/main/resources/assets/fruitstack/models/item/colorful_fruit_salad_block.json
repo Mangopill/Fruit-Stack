@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "fruitstack:item/colorful_fruit_salad_block"
+	}
+}

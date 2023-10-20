@@ -1,0 +1,7 @@
+{
+  "parent": "fruitstack:custom/moon_cake_1",
+	"textures": {
+		"0": "fruitstack:item/chinese_pear_leaved_moon_cake",
+		"particle": "fruitstack:item/chinese_pear_leaved_moon_cake"
+	}
+}

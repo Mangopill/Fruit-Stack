@@ -1,0 +1,229 @@
+{
+  "variants": {
+    "facing=north,stage=dough_stage0": {
+      "model": "fruitstack:block/dough_stage0"
+    },
+    "facing=south,stage=dough_stage0": {
+      "model": "fruitstack:block/dough_stage0",
+      "y": 180
+    },
+    "facing=west,stage=dough_stage0": {
+      "model": "fruitstack:block/dough_stage0",
+      "y": 270
+    },
+    "facing=east,stage=dough_stage0": {
+      "model": "fruitstack:block/dough_stage0",
+      "y": 90
+    },
+    "facing=north,stage=dough_stage1": {
+      "model": "fruitstack:block/dough_stage1"
+    },
+    "facing=south,stage=dough_stage1": {
+      "model": "fruitstack:block/dough_stage1",
+      "y": 180
+    },
+    "facing=west,stage=dough_stage1": {
+      "model": "fruitstack:block/dough_stage1",
+      "y": 270
+    },
+    "facing=east,stage=dough_stage1": {
+      "model": "fruitstack:block/dough_stage1",
+      "y": 90
+    },
+    "facing=north,stage=dough_stage2": {
+      "model": "fruitstack:block/dough_stage2"
+    },
+    "facing=south,stage=dough_stage2": {
+      "model": "fruitstack:block/dough_stage2",
+      "y": 180
+    },
+    "facing=west,stage=dough_stage2": {
+      "model": "fruitstack:block/dough_stage2",
+      "y": 270
+    },
+    "facing=east,stage=dough_stage2": {
+      "model": "fruitstack:block/dough_stage2",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_grape_fruit_sand_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage0"
+    },
+    "facing=south,stage=unbaked_grape_fruit_sand_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage0",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_grape_fruit_sand_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage0",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_grape_fruit_sand_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage0",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_grape_fruit_sand_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage1"
+    },
+    "facing=south,stage=unbaked_grape_fruit_sand_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage1",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_grape_fruit_sand_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage1",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_grape_fruit_sand_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage1",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_grape_fruit_sand_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage2"
+    },
+    "facing=south,stage=unbaked_grape_fruit_sand_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage2",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_grape_fruit_sand_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage2",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_grape_fruit_sand_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_grape_fruit_sand_pizza_stage2",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_blue_red_mango_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage0"
+    },
+    "facing=south,stage=unbaked_blue_red_mango_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage0",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_blue_red_mango_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage0",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_blue_red_mango_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage0",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_blue_red_mango_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage1"
+    },
+    "facing=south,stage=unbaked_blue_red_mango_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage1",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_blue_red_mango_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage1",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_blue_red_mango_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage1",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_blue_red_mango_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage2"
+    },
+    "facing=south,stage=unbaked_blue_red_mango_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage2",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_blue_red_mango_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage2",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_blue_red_mango_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_blue_red_mango_pizza_stage2",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_hawthorn_nut_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage0"
+    },
+    "facing=south,stage=unbaked_hawthorn_nut_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage0",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_hawthorn_nut_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage0",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_hawthorn_nut_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage0",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_hawthorn_nut_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage1"
+    },
+    "facing=south,stage=unbaked_hawthorn_nut_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage1",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_hawthorn_nut_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage1",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_hawthorn_nut_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage1",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_hawthorn_nut_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage2"
+    },
+    "facing=south,stage=unbaked_hawthorn_nut_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage2",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_hawthorn_nut_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage2",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_hawthorn_nut_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_hawthorn_nut_pizza_stage2",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage0"
+    },
+    "facing=south,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage0",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage0",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage0": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage0",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage1"
+    },
+    "facing=south,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage1",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage1",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage1": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage1",
+      "y": 90
+    },
+    "facing=north,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage2"
+    },
+    "facing=south,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage2",
+      "y": 180
+    },
+    "facing=west,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage2",
+      "y": 270
+    },
+    "facing=east,stage=unbaked_sweet_and_refreshing_flavored_pizza_stage2": {
+      "model": "fruitstack:block/unbaked_sweet_and_refreshing_flavored_pizza_stage2",
+      "y": 90
+    }
+  }
+}

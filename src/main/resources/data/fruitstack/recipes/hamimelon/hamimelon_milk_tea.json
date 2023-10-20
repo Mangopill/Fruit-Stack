@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "item": "fruitstack:milky_tea"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:hamimelon_milk_tea"
+  },
+  "container": {
+    "item": "fruitstack:milk_tea_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

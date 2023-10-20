@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "fruitstack:block/zong_zi_leaves_crop_stage7"
+    }
+  }
+  

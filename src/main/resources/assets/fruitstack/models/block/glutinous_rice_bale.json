@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "fruitstack:block/glutinous_rice_bale_top",
+    "side": "fruitstack:block/glutinous_rice_bale_side",
+    "bottom": "fruitstack:block/glutinous_rice_bale_bottom"
+  }
+}

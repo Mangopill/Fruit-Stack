@@ -1,0 +1,8 @@
+{
+  "parent": "fruitstack:block/template_farmland_custom",
+  "textures": {
+    "top": "fruitstack:block/corrupt_soil_farmland_moist",
+    "bottom": "fruitstack:block/corrupt_soil",
+    "side": "fruitstack:block/corrupt_soil_farmland_moist_side"
+  }
+}

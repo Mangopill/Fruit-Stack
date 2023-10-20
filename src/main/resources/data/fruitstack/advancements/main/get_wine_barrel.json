@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:wine_barrel"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_wine_barrel"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_wine_barrel.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_wine_barrel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:wine_barrel"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_wine_barrel"
+      ]
+    ]
+  }

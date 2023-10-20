@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/get_wine_barrel",
+    "display": {
+      "icon": {
+        "item": "fruitstack:low_wooden_barrel"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_low_wooden_barrel"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_low_wooden_barrel.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_low_wooden_barrel": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:low_wooden_barrel"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_low_wooden_barrel"
+      ]
+    ]
+  }

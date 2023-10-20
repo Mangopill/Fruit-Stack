@@ -1,0 +1,57 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "fruitstack:block/grape_jelly_block",
+		"particle": "fruitstack:block/grape_jelly_block"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 12],
+			"to": [12, 4, 14],
+			"faces": {
+				"north": {"uv": [4, 12, 12, 15], "texture": "#0"},
+				"east": {"uv": [2, 11, 4, 14], "texture": "#0"},
+				"south": {"uv": [4, 12, 12, 15], "texture": "#0"},
+				"west": {"uv": [12, 11, 14, 14], "texture": "#0"},
+				"up": {"uv": [3, 5, 13, 8], "texture": "#0"},
+				"down": {"uv": [4, 13, 12, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [12, 0, 12],
+			"to": [13, 4, 13],
+			"faces": {
+				"north": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"east": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"south": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"west": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"up": {"uv": [4, 12, 5, 13], "texture": "#0"},
+				"down": {"uv": [4, 14, 5, 15], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 0, 12],
+			"to": [4, 4, 13],
+			"faces": {
+				"north": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"east": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"south": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"west": {"uv": [4, 12, 5, 15], "texture": "#0"},
+				"up": {"uv": [4, 12, 5, 13], "texture": "#0"},
+				"down": {"uv": [4, 14, 5, 15], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		1,
+		2,
+		{
+			"name": "group",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"children": []
+		}
+	]
+}

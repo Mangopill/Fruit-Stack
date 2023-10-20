@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:ground_cucumber_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:ground_cucumber",
+    "count": 9
+  }
+}

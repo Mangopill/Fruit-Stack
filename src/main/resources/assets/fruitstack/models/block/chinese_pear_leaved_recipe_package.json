@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/chinese_pear_leaved_recipe_package",
+      "particle": "fruitstack:recipe/chinese_pear_leaved_recipe_package"
+    }
+  }
+  

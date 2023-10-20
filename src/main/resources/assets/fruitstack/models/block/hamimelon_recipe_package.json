@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/hamimelon_recipe_package",
+      "particle": "fruitstack:recipe/hamimelon_recipe_package"
+    }
+  }
+  

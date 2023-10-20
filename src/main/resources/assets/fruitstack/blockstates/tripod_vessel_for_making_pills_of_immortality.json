@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,support=none": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality"
+    },
+    "facing=south,support=none": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality",
+      "y": 180
+    },
+    "facing=west,support=none": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality",
+      "y": 270
+    },
+    "facing=east,support=none": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality",
+      "y": 90
+    },
+    "facing=north,support=tray": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle"
+    },
+    "facing=south,support=tray": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 180
+    },
+    "facing=west,support=tray": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 270
+    },
+    "facing=east,support=tray": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 90
+    },
+    "facing=north,support=handle": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle"
+    },
+    "facing=south,support=handle": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 180
+    },
+    "facing=west,support=handle": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 270
+    },
+    "facing=east,support=handle": {
+      "model": "fruitstack:block/tripod_vessel_for_making_pills_of_immortality_handle",
+      "y": 90
+    }
+  }
+}

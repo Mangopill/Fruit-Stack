@@ -1,0 +1,7 @@
+{
+	"parent": "fruitstack:custom/jam2",
+	"textures": {
+		"0": "fruitstack:item/holboellia_latifolia_jam",
+		"particle": "fruitstack:item/holboellia_latifolia_jam"
+	}
+  }

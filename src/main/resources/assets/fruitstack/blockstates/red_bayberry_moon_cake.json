@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "fruitstack:block/red_bayberry_moon_cake"
+    },
+    "bites=1": {
+      "model": "fruitstack:block/red_bayberry_moon_cake_slice1"
+    },
+    "bites=2": {
+      "model": "fruitstack:block/red_bayberry_moon_cake_slice2"
+    },
+    "bites=3": {
+      "model": "fruitstack:block/red_bayberry_moon_cake_slice3"
+    }
+  }
+}

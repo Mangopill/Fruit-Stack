@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#",
+    "#b"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:maythorn"
+    },
+    "a": {
+      "item": "minecraft:sugar"
+    },
+    "b": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "fruitstack:maythorn_jam"
+  }
+}

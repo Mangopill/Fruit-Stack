@@ -1,0 +1,33 @@
+{
+  "parent": "fruitstack:main/root",
+  "display": {
+    "icon": {
+      "item": "fruitstack:hamimelon"
+    },
+    "title": {
+      "translate": "fruitstack.advancement.get_sweet"
+    },
+    "description": {
+      "translate": "fruitstack.advancement.get_sweet.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_sweet": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "fruitstack:sweet": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_sweet"
+    ]
+  ]
+}

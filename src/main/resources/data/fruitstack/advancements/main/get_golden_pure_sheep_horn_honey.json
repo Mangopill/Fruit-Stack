@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:golden_pure_sheep_horn_honey"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_golden_pure_sheep_horn_honey"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_golden_pure_sheep_horn_honey.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_golden_pure_sheep_horn_honey": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:golden_pure_sheep_horn_honey"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_golden_pure_sheep_horn_honey"
+      ]
+    ]
+  }

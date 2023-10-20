@@ -1,0 +1,10 @@
+{
+	"parent": "fruitstack:custom/fruit_popsicle_machine_age0",
+	"textures": {
+		"1": "fruitstack:block/juicer_top",
+		"2": "fruitstack:block/popsicle_machine_side",
+		"3": "fruitstack:block/glass",
+		"5": "fruitstack:item/pear_juice",
+		"particle": "fruitstack:block/popsicle_machine_side"
+	}
+}

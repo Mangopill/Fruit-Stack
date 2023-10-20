@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    },
+    {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    },
+    {
+      "item": "fruitstack:milky_tea"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:chinese_pear_leaved_milk_tea"
+  },
+  "container": {
+    "item": "fruitstack:milk_tea_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

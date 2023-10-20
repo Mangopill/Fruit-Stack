@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:blueberries"
+    }
+  },
+  "result": {
+    "item": "fruitstack:blueberries_crate"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "fruitstack:block/pie",
+  "textures": {
+    "particle": "fruitstack:block/blueberries_pie_top",
+    "bottom": "fruitstack:block/blueberries_pie_bottom",
+    "side": "fruitstack:block/blueberries_pie_side",
+    "top": "fruitstack:block/blueberries_pie_top"
+  }
+}

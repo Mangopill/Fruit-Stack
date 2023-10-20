@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "fruitstack:item/red_bayberry_sapling"
+    }
+  }
+  

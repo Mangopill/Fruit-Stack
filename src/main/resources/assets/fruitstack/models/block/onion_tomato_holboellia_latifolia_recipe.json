@@ -1,0 +1,9 @@
+{
+    "parent": "fruitstack:custom/recipe",
+    "textures": {
+      "0": "fruitstack:recipe/onion_tomato_holboellia_latifolia_recipe",
+      "1": "fruitstack:recipe/recipe_back",
+      "particle": "fruitstack:recipe/onion_tomato_holboellia_latifolia_recipe"
+    }
+  }
+  

@@ -1,0 +1,37 @@
+{
+    "parent": "fruitstack:main/root",
+    "display": {
+      "icon": {
+        "item": "fruitstack:a_bundle_of_candied_haws_on_a_stick"
+      },
+      "title": {
+        "translate": "fruitstack.advancement.get_a_bundle_of_candied_haws_on_a_stick"
+      },
+      "description": {
+        "translate": "fruitstack.advancement.get_a_bundle_of_candied_haws_on_a_stick.desc"
+      },
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "criteria": {
+      "get_a_bundle_of_candied_haws_on_a_stick": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "fruitstack:a_bundle_of_candied_haws_on_a_stick"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_a_bundle_of_candied_haws_on_a_stick"
+      ]
+    ]
+  }

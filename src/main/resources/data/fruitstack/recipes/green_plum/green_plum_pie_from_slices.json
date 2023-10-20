@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:green_plum_pie_slice"
+    }
+  },
+  "result": {
+    "item": "fruitstack:green_plum_pie"
+  }
+}

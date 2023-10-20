@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "fruitstack:block/holboellia_latifolia_egg_milk_pudding"
+    },
+    "bites=1": {
+      "model": "fruitstack:block/holboellia_latifolia_egg_milk_pudding_slice1"
+    },
+    "bites=2": {
+      "model": "fruitstack:block/holboellia_latifolia_egg_milk_pudding_slice2"
+    }
+  }
+}

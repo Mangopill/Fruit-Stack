@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "name": "wild_huoshen_fruit0",
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:huoshen_fruit"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "fruitstack:main/root",
+  "display": {
+    "icon": {
+      "item": "fruitstack:milky_tea"
+    },
+    "title": {
+      "translate": "fruitstack.advancement.get_warm_stomach"
+    },
+    "description": {
+      "translate": "fruitstack.advancement.get_warm_stomach.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_warm_stomach": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "fruitstack:warm_stomach": {}
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_warm_stomach"
+    ]
+  ]
+}

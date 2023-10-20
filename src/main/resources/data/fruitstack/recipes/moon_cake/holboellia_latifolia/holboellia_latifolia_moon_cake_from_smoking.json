@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "fruitstack:raw_holboellia_latifolia_moon_cake"
+  },
+  "result": "fruitstack:holboellia_latifolia_moon_cake",
+  "experience": 0.35,
+  "cookingtime": 100
+}

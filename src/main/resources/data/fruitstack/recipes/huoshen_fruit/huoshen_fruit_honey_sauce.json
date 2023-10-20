@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:huoshen_fruit_juice"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:huoshen_fruit_honey_sauce"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

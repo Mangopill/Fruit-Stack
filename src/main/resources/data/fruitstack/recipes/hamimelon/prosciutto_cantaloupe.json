@@ -1,0 +1,23 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:hamimelon"
+    },
+    {
+      "item": "minecraft:porkchop"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:prosciutto_cantaloupe",
+    "count": 1
+  },
+  "experience": 1.0,
+  "cookingtime": 150
+}

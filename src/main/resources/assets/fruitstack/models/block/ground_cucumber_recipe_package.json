@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/ground_cucumber_recipe_package",
+      "particle": "fruitstack:recipe/ground_cucumber_recipe_package"
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#",
+    "# "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:grape"
+    },
+    "a": {
+      "item": "minecraft:oak_sapling"
+    }
+  },
+  "result": {
+    "item": "fruitstack:grape_sapling"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:green_plum"
+    },
+    {
+      "item": "fruitstack:green_plum"
+    },
+    {
+      "item": "fruitstack:red_bayberry"
+    },
+    {
+      "item": "fruitstack:red_bayberry"
+    },
+    {
+      "item": "fruitstack:red_bayberry"
+    },
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:sour_plum_chicken_block"
+  },
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "experience": 0.35,
+  "cookingtime": 100
+}

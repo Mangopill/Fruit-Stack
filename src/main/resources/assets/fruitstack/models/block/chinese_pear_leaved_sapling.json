@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+      "cross": "fruitstack:item/chinese_pear_leaved_sapling"
+    }
+  }
+  

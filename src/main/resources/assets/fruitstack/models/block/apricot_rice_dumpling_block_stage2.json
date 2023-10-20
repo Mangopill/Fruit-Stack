@@ -1,0 +1,12 @@
+{
+	"parent": "fruitstack:custom/rice_dumpling_block_2",
+	"textures": {
+		"0": "fruitstack:block/cooking_pot_bottom",
+		"1": "fruitstack:block/cooking_pot_top",
+		"3": "fruitstack:block/cooking_pot_side",
+		"4": "fruitstack:block/cooking_pot_parts",
+		"6": "fruitstack:item/apricot_rice_dumpling",
+		"7": "fruitstack:block/water",
+		"particle": "fruitstack:block/cooking_pot_bottom"
+	}
+}

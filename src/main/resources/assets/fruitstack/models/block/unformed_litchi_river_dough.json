@@ -1,0 +1,33 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "fruitstack:item/unformed_litchi_river_dough",
+		"particle": "fruitstack:item/unformed_litchi_river_dough"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 3],
+			"to": [12, 2, 13],
+			"faces": {
+				"north": {"uv": [5, 11, 13, 13], "texture": "#0"},
+				"east": {"uv": [2, 11, 12, 13], "texture": "#0"},
+				"south": {"uv": [3, 11, 11, 13], "texture": "#0"},
+				"west": {"uv": [2, 11, 12, 13], "texture": "#0"},
+				"up": {"uv": [7, 4, 15, 12], "texture": "#0"},
+				"down": {"uv": [7, 4, 15, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 1, 4],
+			"to": [11, 3, 12],
+			"faces": {
+				"north": {"uv": [3, 12, 9, 14], "texture": "#0"},
+				"east": {"uv": [2, 11, 11, 13], "texture": "#0"},
+				"south": {"uv": [3, 12, 9, 14], "texture": "#0"},
+				"west": {"uv": [2, 11, 11, 13], "texture": "#0"},
+				"up": {"uv": [7, 4, 13, 13], "texture": "#0"},
+				"down": {"uv": [7, 4, 13, 13], "texture": "#0"}
+			}
+		}
+	]
+}

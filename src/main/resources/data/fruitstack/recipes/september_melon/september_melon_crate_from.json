@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:september_melon_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:september_melon",
+    "count": 9
+  }
+}

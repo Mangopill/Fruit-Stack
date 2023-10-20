@@ -1,0 +1,8 @@
+{
+    "parent": "fruitstack:custom/recipe_package",
+    "textures": {
+      "0": "fruitstack:recipe/frying_pan_recipe_package",
+      "particle": "fruitstack:recipe/frying_pan_recipe_package"
+    }
+  }
+  

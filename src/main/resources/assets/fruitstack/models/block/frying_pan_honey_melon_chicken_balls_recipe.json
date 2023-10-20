@@ -1,0 +1,8 @@
+{
+	"parent": "fruitstack:custom/frying_pan_recipe",
+	"textures": {
+		"0": "fruitstack:recipe/frying_pan_honey_melon_chicken_balls_recipe",
+		"1": "fruitstack:recipe/recipe_back",
+		"particle": "fruitstack:recipe/recipe_back"
+	}
+}

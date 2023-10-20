@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "fruitstack:block/sugar_cane_bundle_bottom",
+    "side": "fruitstack:block/sugar_cane_bundle_side",
+    "bottom": "fruitstack:block/sugar_cane_bundle_bottom"
+  }
+}

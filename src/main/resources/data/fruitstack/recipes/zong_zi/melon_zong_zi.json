@@ -1,0 +1,14 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:raw_melon_zong_zi"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:melon_zong_zi",
+    "count": 1
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "fruitstack:block/apricot_log_big",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "fruitstack:block/apricot_log_big"
+    },
+    "axis=z": {
+      "model": "fruitstack:block/apricot_log_big",
+      "x": 90
+    }
+  }
+}

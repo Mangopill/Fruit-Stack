@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fruitstack:block/mango_recipe_package"
+    },
+    "facing=east": {
+      "model": "fruitstack:block/mango_recipe_package",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fruitstack:block/mango_recipe_package",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fruitstack:block/mango_recipe_package",
+      "y": 270
+    }
+  }
+}

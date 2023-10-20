@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pool1",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "fruitstack:hamimelon_sago_soup_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "fruitstack:hamimelon_sago_soup_block",
+          "properties": {
+            "servings": "6"
+          }
+        }
+      ]
+    }
+  ]
+}

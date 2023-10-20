@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "fruitstack:item/sour_and_sweet_plum_cake"
+	}
+}

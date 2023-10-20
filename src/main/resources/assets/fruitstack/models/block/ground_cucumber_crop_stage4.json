@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+      "crop": "fruitstack:block/ground_cucumber_crop_stage4"
+    }
+  }
+  

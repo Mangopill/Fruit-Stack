@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "fruitstack:raw_litchi_moon_cake"
+  },
+  "result": "fruitstack:litchi_moon_cake",
+  "experience": 0.35,
+  "cookingtime": 100
+}

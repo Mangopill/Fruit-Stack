@@ -1,0 +1,10 @@
+{
+  "parent": "fruitstack:block/pie_slice3",
+  "textures": {
+    "particle": "fruitstack:block/chinese_pear_leaved_pie_top",
+    "bottom": "fruitstack:block/chinese_pear_leaved_pie_bottom",
+    "inner": "fruitstack:block/chinese_pear_leaved_pie_inner",
+    "side": "fruitstack:block/chinese_pear_leaved_pie_side",
+    "top": "fruitstack:block/chinese_pear_leaved_pie_top"
+  }
+}

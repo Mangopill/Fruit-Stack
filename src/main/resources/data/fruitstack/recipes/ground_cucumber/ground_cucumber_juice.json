@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:ground_cucumber_slice"
+    },
+    {
+      "item": "fruitstack:ground_cucumber_slice"
+    },
+    {
+      "item": "fruitstack:ground_cucumber_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:ground_cucumber_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

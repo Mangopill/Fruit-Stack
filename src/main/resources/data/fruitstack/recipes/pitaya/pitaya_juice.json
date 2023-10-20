@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:pitaya_slice"
+    },
+    {
+      "item": "fruitstack:pitaya_slice"
+    },
+    {
+      "item": "fruitstack:pitaya_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:pitaya_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    "a#a",
+    " a "
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:holboellia_latifolia"
+    },
+    "a": {
+      "tag": "forge:fences/wooden"
+    }
+  },
+  "result": {
+    "item": "fruitstack:holboellia_latifolia_seeds"
+  }
+}

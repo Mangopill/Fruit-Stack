@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#c#",
+    "ada",
+    "#b#"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:zong_zi_leaves"
+    },
+    "a": {
+      "item": "fruitstack:glutinous_rice"
+    },
+    "b": {
+      "item": "fruitstack:ground_cucumber_slice"
+    },
+    "c": {
+      "item": "fruitstack:beating_melons_slice"
+    },
+    "d": {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    }
+  },
+  "result": {
+    "item": "fruitstack:raw_melon_zong_zi"
+  }
+}

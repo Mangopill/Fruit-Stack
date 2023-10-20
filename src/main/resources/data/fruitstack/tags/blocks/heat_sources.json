@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:magma_block",
+    "minecraft:lava_cauldron",
+    "fruitstack:clay_oven",
+    "#fruitstack:tray_heat_sources"
+  ]
+}

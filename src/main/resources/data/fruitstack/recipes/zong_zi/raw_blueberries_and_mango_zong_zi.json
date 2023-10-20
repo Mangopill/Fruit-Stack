@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#c#",
+    "ada",
+    "#b#"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:zong_zi_leaves"
+    },
+    "a": {
+      "item": "fruitstack:glutinous_rice"
+    },
+    "b": {
+      "item": "fruitstack:blueberries"
+    },
+    "c": {
+      "item": "fruitstack:mango_slice"
+    },
+    "d": {
+      "item": "fruitstack:september_melon"
+    }
+  },
+  "result": {
+    "item": "fruitstack:raw_blueberries_and_mango_zong_zi"
+  }
+}

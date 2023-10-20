@@ -1,0 +1,17 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fruitstack:fish_skin"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:sago_soup",
+    "count": 1
+  },
+  "experience": 1.0,
+  "cookingtime": 150
+}

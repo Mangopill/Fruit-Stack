@@ -1,0 +1,22 @@
+{
+  "type": "fruitstack:juicer",
+  "ingredients": [
+    {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    },
+    {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    },
+    {
+      "item": "fruitstack:chinese_pear_leaved_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:chinese_pear_leaved_juice"
+  },
+  "container": {
+    "item": "fruitstack:juice_cup"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

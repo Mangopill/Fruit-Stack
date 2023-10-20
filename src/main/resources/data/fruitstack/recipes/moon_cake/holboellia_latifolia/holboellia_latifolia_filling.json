@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "fruitstack:holboellia_latifolia_slice"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:holboellia_latifolia_filling"
+  }
+}

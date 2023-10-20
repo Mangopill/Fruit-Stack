@@ -1,0 +1,199 @@
+{
+  "variants": {
+    "facing=north,servings=0": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage12"
+    },
+    "facing=south,servings=0": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage12",
+      "y": 180
+    },
+    "facing=west,servings=0": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage12",
+      "y": 270
+    },
+    "facing=east,servings=0": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage12",
+      "y": 90
+    },
+    "facing=north,servings=1": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage11"
+    },
+    "facing=south,servings=1": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage11",
+      "y": 180
+    },
+    "facing=west,servings=1": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage11",
+      "y": 270
+    },
+    "facing=east,servings=1": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage11",
+      "y": 90
+    },
+    "facing=north,servings=2": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage10"
+    },
+    "facing=south,servings=2": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage10",
+      "y": 180
+    },
+    "facing=west,servings=2": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage10",
+      "y": 270
+    },
+    "facing=east,servings=2": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage10",
+      "y": 90
+    },
+    "facing=north,servings=3": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage9"
+    },
+    "facing=south,servings=3": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage9",
+      "y": 180
+    },
+    "facing=west,servings=3": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage9",
+      "y": 270
+    },
+    "facing=east,servings=3": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage9",
+      "y": 90
+    },
+    "facing=north,servings=4": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage8"
+    },
+    "facing=south,servings=4": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage8",
+      "y": 180
+    },
+    "facing=west,servings=4": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage8",
+      "y": 270
+    },
+    "facing=east,servings=4": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage8",
+      "y": 90
+    },
+    "facing=north,servings=5": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage7"
+    },
+    "facing=south,servings=5": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage7",
+      "y": 180
+    },
+    "facing=west,servings=5": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage7",
+      "y": 270
+    },
+    "facing=east,servings=5": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage7",
+      "y": 90
+    },
+    "facing=north,servings=6": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage6"
+    },
+    "facing=south,servings=6": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage6",
+      "y": 180
+    },
+    "facing=west,servings=6": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage6",
+      "y": 270
+    },
+    "facing=east,servings=6": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage6",
+      "y": 90
+    },
+    "facing=north,servings=7": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage5"
+    },
+    "facing=south,servings=7": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage5",
+      "y": 180
+    },
+    "facing=west,servings=7": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage5",
+      "y": 270
+    },
+    "facing=east,servings=7": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage5",
+      "y": 90
+    },
+    "facing=north,servings=8": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage4"
+    },
+    "facing=south,servings=8": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage4",
+      "y": 180
+    },
+    "facing=west,servings=8": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage4",
+      "y": 270
+    },
+    "facing=east,servings=8": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage4",
+      "y": 90
+    },
+    "facing=north,servings=9": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage3"
+    },
+    "facing=south,servings=9": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage3",
+      "y": 180
+    },
+    "facing=west,servings=9": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage3",
+      "y": 270
+    },
+    "facing=east,servings=9": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage3",
+      "y": 90
+    },
+    "facing=north,servings=10": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage2"
+    },
+    "facing=south,servings=10": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage2",
+      "y": 180
+    },
+    "facing=west,servings=10": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage2",
+      "y": 270
+    },
+    "facing=east,servings=10": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage2",
+      "y": 90
+    },
+    "facing=north,servings=11": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage1"
+    },
+    "facing=south,servings=11": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage1",
+      "y": 180
+    },
+    "facing=west,servings=11": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage1",
+      "y": 270
+    },
+    "facing=east,servings=11": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage1",
+      "y": 90
+    },
+    "facing=north,servings=12": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage0"
+    },
+    "facing=south,servings=12": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage0",
+      "y": 180
+    },
+    "facing=west,servings=12": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage0",
+      "y": 270
+    },
+    "facing=east,servings=12": {
+      "model": "fruitstack:block/a_bundle_of_candied_haws_on_a_stick_stage0",
+      "y": 90
+    }
+  }
+}

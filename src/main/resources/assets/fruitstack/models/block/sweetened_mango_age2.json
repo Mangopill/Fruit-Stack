@@ -1,0 +1,21 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "fruitstack:item/dried_mango",
+		"particle": "fruitstack:item/dried_mango"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 6],
+			"to": [9, 2, 10],
+			"faces": {
+				"north": {"uv": [1, 10, 7, 12], "texture": "#0"},
+				"east": {"uv": [4, 10, 10, 12], "texture": "#0"},
+				"south": {"uv": [4, 12, 10, 14], "texture": "#0"},
+				"west": {"uv": [2, 9, 8, 11], "texture": "#0"},
+				"up": {"uv": [6, 3, 10, 7], "texture": "#0"},
+				"down": {"uv": [4, 9, 8, 14], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "bbb",
+    "cac"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:plum"
+    },
+    "b": {
+      "item": "minecraft:sugar"
+    },
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "c": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "fruitstack:sour_and_sweet_plum_cake"
+  }
+}

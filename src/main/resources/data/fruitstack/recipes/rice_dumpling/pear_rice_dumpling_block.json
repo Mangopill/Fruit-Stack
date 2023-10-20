@@ -1,0 +1,37 @@
+{
+  "type": "fruitstack:cooking",
+  "ingredients": [
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:glutinous_rice"
+    },
+    {
+      "item": "fruitstack:pear_filling"
+    },
+    {
+      "item": "fruitstack:pear_filling"
+    },
+    {
+      "item": "fruitstack:pear_filling"
+    },
+    {
+      "item": "fruitstack:pear_filling"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:pear_rice_dumpling_block"
+  },
+  "container": {
+    "item": "fruitstack:rice_dumpling_pot"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

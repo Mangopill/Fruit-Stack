@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fruitstack:mango_block"
+    }
+  },
+  "result": {
+    "item": "fruitstack:mango_crate"
+  }
+}

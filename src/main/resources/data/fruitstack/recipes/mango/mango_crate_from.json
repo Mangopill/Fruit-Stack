@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fruitstack:mango_crate"
+    }
+  ],
+  "result": {
+    "item": "fruitstack:mango_block",
+    "count": 9
+  }
+}
